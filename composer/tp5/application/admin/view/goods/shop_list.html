@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>萤火小程序商城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="icon" type="image/png" href="favicon.ico"/>
+    <meta name="apple-mobile-web-app-title" content="萤火小程序商城"/>
+    <link rel="stylesheet" href="__PATH__/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="__PATH__/css/app.css?v=1.1.41"/>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_783249_m68ye1gfnza.css">
+    <script src="__PATH__/js/jquery.min.js"></script>
+    <script src="https://at.alicdn.com/t/font_783249_e5yrsf08rap.js"></script>
+    <script>
+        BASE_URL = 'https://demo.yiovo.com/';
+        STORE_URL = 'index.php?s=/store';
+    </script>
+</head>
+
+<body data-type="">
+<div class="am-g tpl-g">
+    <!-- 头部 -->
+    <header class="tpl-header">
+        <!-- 右侧内容 -->
+        <div class="tpl-header-fluid">
+            <!-- 侧边切换 -->
+            <div class="am-fl tpl-header-button switch-button">
+                <i class="iconfont icon-menufold"></i>
+            </div>
+            <!-- 刷新页面 -->
+            <div class="am-fl tpl-header-button refresh-button">
+                <i class="iconfont icon-refresh"></i>
+            </div>
+            <!-- 其它功能-->
+            <div class="am-fr tpl-header-navbar">
+                <ul>
+                    <!-- 商业版介绍 -->
+                    <li class="am-text-sm tpl-header-navbar-welcome">
+                        <a href="index.php?s=/pro" style="font-size: 1.3rem; color: #166bef">商业版介绍
+                        </a>
+                    </li>
+                    <!-- 欢迎语 -->
+                    <li class="am-text-sm tpl-header-navbar-welcome">
+                        <a href="index.php?s=/store/store.user/renew">欢迎你，<span>admin</span>
+                        </a>
+                    </li>
+                    <!-- 退出 -->
+                    <li class="am-text-sm">
+                        <a href="javascript:void(0);">
+                            <i class="iconfont icon-tuichu"></i> 退出
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- 侧边导航栏 -->
+    <div class="left-sidebar dis-flex">
+                <div class="sidebar-scroll">
+            <!-- 一级菜单 -->
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-heading">萤火小程序商城</li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/index/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-home"
+                                   style=""></i>
+                                                        首页                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/store.user/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-guanliyuan"
+                                   style=""></i>
+                                                        管理员                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/goods/index"
+                           class="active">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-goods"
+                                   style=""></i>
+                                                        商品管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/order/all_list"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-order"
+                                   style=""></i>
+                                                        订单管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/user/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-user"
+                                   style=""></i>
+                                                        用户管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/shop/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-shop"
+                                   style=""></i>
+                                                        门店管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/content.article/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-wenzhang"
+                                   style=""></i>
+                                                        内容管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/market.coupon/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-marketing"
+                                   style=""></i>
+                                                        营销管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/statistics.data/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-qushitu"
+                                   style=""></i>
+                                                        数据统计                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/wxapp/setting"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-wxapp"
+                                   style="color:#36b313;"></i>
+                                                        小程序                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/apps.dealer.apply/index"
+                           class="">
+                                                            <svg class="icon sidebar-nav-link-logo" aria-hidden="true">
+                                    <use xlink:href="#icon-application"></use>
+                                </svg>
+                                                        应用中心                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/setting/store"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-setting"
+                                   style=""></i>
+                                                        设置                        </a>
+                    </li>
+                            </ul>
+        </div>
+        <!-- 子级菜单-->
+                    <div class="sidebar-second-scroll">
+                <ul class="left-sidebar-second">
+                    <li class="sidebar-second-title">商品管理</li>
+                    <li class="sidebar-second-item">
+                                                        <!-- 二级菜单-->
+                                <a href="index.php?s=/store/goods/index"
+                                   class="active">
+                                    商品列表                                </a>
+                                                            <!-- 二级菜单-->
+                                <a href="{:url('category/index')}"
+                                   class="">
+                                    商品分类                                </a>
+                                                            <!-- 二级菜单-->
+                                <a href="index.php?s=/store/goods.comment/index"
+                                   class="">
+                                    商品评价                                </a>
+                                                </li>
+                </ul>
+            </div>
+            </div>
+
+    <!-- 内容区域 start -->
+    <div class="tpl-content-wrapper ">
+        <div class="row-content am-cf">
+    <div class="row">
+        <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+            <div class="widget am-cf">
+                <div class="widget-head am-cf">
+                    <div class="widget-title am-cf">出售中的商品</div>
+                </div>
+                <div class="widget-body am-fr">
+                    <!-- 工具栏 -->
+                    <div class="page_toolbar am-margin-bottom-xs am-cf">
+                        <form class="toolbar-form" action="" method="get">
+                            <div class="am-u-sm-12 am-u-md-3">
+                                <div class="am-form-group">
+                                    <div class="am-btn-group am-btn-group-xs">
+               <a class="am-btn am-btn-default am-btn-success"  href="{:url('add')}">
+                <span class="am-icon-plus"></span> 新增
+                      </a>
+           </div>
+                                                                    </div>
+                            </div>
+                            <div class="am-u-sm-12 am-u-md-9">
+                                <div class="am fr">
+                                    <div class="am-form-group am-fl">
+            <select name="category_id" data-am-selected="{searchBox: 1, btnSize: 'sm',  placeholder: '商品分类', maxHeight: 400}">
+                                   
+            <option value="0">内衣馆</option>
+            <option value="10064">大牌文胸</option>
+            <option value="10065">自营内衣</option>
+            <option value="10066">内衣爆款</option>
+            <option value="10067">女士围巾/披肩</option>
+            <option value="10068">配饰馆</option>
+            <option value="10009">箱包手袋</option>
+            <option value="10075">拉杆箱</option>
+            <option value="10076">时尚男包</option>
+            <option value="10077">男士腰带</option>
+            <option value="10078">男包上新</option>
+            <option value="10079">自营女包</option>
+            <option value="10080">新款双肩包</option>
+        </select>
+        </div>
+        <div class="am-form-group am-fl">
+             <select name="status" data-am-selected="{btnSize: 'sm', placeholder: '商品状态'}">
+                                            <option value=""></option>
+                                            <option value="10"
+                                                >上架
+                                            </option>
+                                            <option value="20"
+                                                >下架
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="am-form-group am-fl">
+                                        <div class="am-input-group am-input-group-sm tpl-form-border-form">
+                                            <input type="text" class="am-form-field" name="search"
+                                                   placeholder="请输入商品名称"
+                                                   value="">
+                                            <div class="am-input-group-btn">
+                                                <button class="am-btn am-btn-default am-icon-search"
+                                                        type="submit"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="am-scrollable-horizontal am-u-sm-12">
+                        <table width="100%" class="am-table am-table-compact am-table-striped
+                         tpl-table-black am-text-nowrap">
+                            <thead>
+                            <tr>
+                                <th>商品ID</th>
+                                <th>商品图片</th>
+                                <th>商品名称</th>
+                                <th>商品分类</th>
+                                <th>实际销量</th>
+                                <th>商品排序</th>
+                                <th>商品状态</th>
+                                <th>添加时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+        <tbody>
+            {if !$goods_data->isEmpty()}
+                {foreach $goods_data as $v}
+                <tr>
+                    <td class="am-text-middle">{$v.id}</td>
+                    <td class="am-text-middle">
+                    <a href="__UP__/{$v.src}" title="点击查看大图" target="_blank">
+                        <img src="__UP__/{$v.src}" width="50" height="50" alt="商品图片">
+                    </a>
+                    </td>
+                    <td class="am-text-middle">
+                        <p class="item-title">{$v.goods_name}</p>
+                    </td>
+                    <td class="am-text-middle">{$v.cate_name}</td>
+                    <td class="am-text-middle">{$v.sales_actual}</td>
+                    <td class="am-text-middle">{$v.goods_sort}</td>
+                    <td class="am-text-middle">
+                                         
+                        {if $v.goods_status eq 10}
+                        <span class="j-state am-badge x-cur-p am-badge-success" data-id="{$v.id}"  data-state="10"> 上架
+                        </span>
+                        {else}
+                        <span class="j-state am-badge x-cur-p am-badge-danger" data-id="{$v.id}" data-state="20"> 下架
+                        </span>
+                        {/if}
+                        </td>
+                        <td class="am-text-middle">{$v.create_time|date='Y-m-d'}</td>
+                        <td class="am-text-middle">
+                            <div class="tpl-table-black-operation">
+                                <a href="{:url('edit', ['id'=>$v.id])}">
+                                    <i class="am-icon-pencil"></i> 编辑
+                                </a>
+                                <a href="javascript:;" class="item-delete tpl-table-black-operation-del" data-id="{$v.id}">
+                                    <i class="am-icon-trash"></i> 删除
+                                </a>
+                           </div>
+                        </td>
+                    </tr>
+                    {/foreach}
+                    {else}
+                    <tr>
+                        <td colspan="9" class="am-text-center">暂无记录</td>
+                    </tr>
+                    {/if}
+                    </tbody>
+                    </table>
+                    </div>
+                    <div class="am-u-lg-12 am-cf">
+                        <div class="am-fr">{$goods_data|raw}</div>
+                        <div class="am-fr pagination-total am-margin-right">
+                            <div class="am-vertical-align-middle">总记录：{$goods_data->total()}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+
+        // 商品状态
+        $('.j-state').click(function () {
+            //{title: '友情提示', btn:['1','2','3']}
+            //btn:['按钮1的名字','按钮2的名字','按钮3的名字'] 
+            var data = $(this).data();
+            layer.confirm('确定要' + (parseInt(data.state) === 10 ? '下架' : '上架') + '该商品吗？'
+                , {title: '友情提示', btn:['确认','取消']}
+                , function (index) {
+
+                    $.post("{:url('setGoodsStatue')}"
+                        , {
+                            goods_id: data.id,
+                            state: data.state
+                        }
+                        , function (result) {
+                           
+                            if(result.status == 200){
+                                $.show_success(result.msg, result.url)
+                            }else{
+                                $.show_error(result.msg)
+                            }
+                        });
+                    layer.close(index);
+                },function(){
+                    //这是第二个按钮
+                },function(){
+                    //这是第三个按钮
+                },function(){
+                    //这是第四个按钮
+                }
+                );
+        });
+
+        $('.item-delete').click(function () {
+            var data = $(this).data();
+            layer.confirm('确定要删除该商品吗？'
+                , {title: '友情提示'}
+                , function (index) {
+                    $.post("{:url('del')}"
+                        , {
+                            goods_id: data.id
+                        }
+                        , function (result) {
+                           
+                            if(result.status == 200){
+                                $.show_success(result.msg, result.url)
+                            }else{
+                                $.show_error(result.msg)
+                            }
+                        });
+                    layer.close(index);
+                }
+                );
+        });
+        
+ 
+    });
+</script>
+
+
+    </div>
+    <!-- 内容区域 end -->
+
+</div>
+<script src="__PATH__/js/layer.js"></script>
+<script src="__PATH__/js/jquery.form.min.js"></script>
+<script src="__PATH__/js/amazeui.min.js"></script>
+<script src="__PATH__/js/webuploader.html5only.js"></script>
+<script src="__PATH__/js/art-template.js"></script>
+<script src="__PATH__/js/app.js?v=1.1.41"></script>
+<script src="__PATH__/js/file.library.js?v=1.1.41"></script>
+</body>
+
+</html>

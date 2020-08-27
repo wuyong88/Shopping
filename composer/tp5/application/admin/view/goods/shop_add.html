@@ -1,0 +1,855 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>萤火小程序商城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="icon" type="image/png" href="favicon.ico"/>
+    <meta name="apple-mobile-web-app-title" content="萤火小程序商城"/>
+    <link rel="stylesheet" href="__PATH__/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="__PATH__/css/app.css?v=1.1.41"/>
+    <link rel="stylesheet" href="__PATH__/layui/css/layui.css"/>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_783249_m68ye1gfnza.css">
+    <script src="__PATH__/js/jquery.min.js"></script>
+    <script src="https://at.alicdn.com/t/font_783249_e5yrsf08rap.js"></script>
+    <script>
+        BASE_URL = 'https://demo.yiovo.com/';
+        STORE_URL = 'index.php?s=/store';
+        SPEC_ADD_URL = '{:url("spec/add")}'
+        SPEC_ADD_VALUE_URL = '{:url("spec/addValue")}'
+        goods_spec_arr = []
+    </script>
+    
+</head>
+
+<body data-type="">
+<div class="am-g tpl-g">
+    <!-- 头部 -->
+    <header class="tpl-header">
+        <!-- 右侧内容 -->
+        <div class="tpl-header-fluid">
+            <!-- 侧边切换 -->
+            <div class="am-fl tpl-header-button switch-button">
+                <i class="iconfont icon-menufold"></i>
+            </div>
+            <!-- 刷新页面 -->
+            <div class="am-fl tpl-header-button refresh-button">
+                <i class="iconfont icon-refresh"></i>
+            </div>
+            <!-- 其它功能-->
+            <div class="am-fr tpl-header-navbar">
+                <ul>
+                    <!-- 商业版介绍 -->
+                    <li class="am-text-sm tpl-header-navbar-welcome">
+                        <a href="index.php?s=/pro" style="font-size: 1.3rem; color: #166bef">商业版介绍
+                        </a>
+                    </li>
+                    <!-- 欢迎语 -->
+                    <li class="am-text-sm tpl-header-navbar-welcome">
+                        <a href="index.php?s=/store/store.user/renew">欢迎你，<span>admin</span>
+                        </a>
+                    </li>
+                    <!-- 退出 -->
+                    <li class="am-text-sm">
+                        <a href="javascript:void(0);">
+                            <i class="iconfont icon-tuichu"></i> 退出
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- 侧边导航栏 -->
+    <div class="left-sidebar dis-flex">
+                <div class="sidebar-scroll">
+            <!-- 一级菜单 -->
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-heading">萤火小程序商城</li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/index/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-home"
+                                   style=""></i>
+                                                        首页                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/store.user/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-guanliyuan"
+                                   style=""></i>
+                                                        管理员                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/goods/index"
+                           class="active">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-goods"
+                                   style=""></i>
+                                                        商品管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/order/all_list"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-order"
+                                   style=""></i>
+                                                        订单管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/user/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-user"
+                                   style=""></i>
+                                                        用户管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/shop/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-shop"
+                                   style=""></i>
+                                                        门店管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/content.article/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-wenzhang"
+                                   style=""></i>
+                                                        内容管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/market.coupon/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-marketing"
+                                   style=""></i>
+                                                        营销管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/statistics.data/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-qushitu"
+                                   style=""></i>
+                                                        数据统计                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/wxapp/setting"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-wxapp"
+                                   style="color:#36b313;"></i>
+                                                        小程序                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/apps.dealer.apply/index"
+                           class="">
+                                                            <svg class="icon sidebar-nav-link-logo" aria-hidden="true">
+                                    <use xlink:href="#icon-application"></use>
+                                </svg>
+                                                        应用中心                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/setting/store"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-setting"
+                                   style=""></i>
+                                                        设置                        </a>
+                    </li>
+                            </ul>
+        </div>
+        <!-- 子级菜单-->
+                    <div class="sidebar-second-scroll">
+                <ul class="left-sidebar-second">
+                    <li class="sidebar-second-title">商品管理</li>
+                    <li class="sidebar-second-item">
+                                                        <!-- 二级菜单-->
+                                <a href="index.php?s=/store/goods/index"
+                                   class="active">
+                                    商品列表                                </a>
+                                                            <!-- 二级菜单-->
+                                <a href="index.php?s=/store/goods.category/index"
+                                   class="">
+                                    商品分类                                </a>
+                                                            <!-- 二级菜单-->
+                                <a href="index.php?s=/store/goods.comment/index"
+                                   class="">
+                                    商品评价                                </a>
+                                                </li>
+                </ul>
+            </div>
+            </div>
+
+    <!-- 内容区域 start -->
+    <div class="tpl-content-wrapper ">
+        <link rel="stylesheet" href="__PATH__/css/goods.css?v=1.1.41">
+<link rel="stylesheet" href="__PATH__/plugins/umeditor/themes/default/css/umeditor.css">
+<div class="row-content am-cf">
+    <div class="row">
+        <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+            <div class="widget am-cf">
+                <form id="my-form" class="am-form tpl-form-line-form" method="post" action="">
+                    <div class="widget-body">
+                        <fieldset>
+                            <div class="widget-head am-cf">
+                                <div class="widget-title am-fl">基本信息</div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品名称 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <input type="text" class="tpl-form-input" name="goods[goods_name]"
+                                           value="" required>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品分类 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <select name="goods[category_id]" required
+                                            data-am-selected="{searchBox: 1, btnSize: 'sm',
+                                             placeholder:'请选择商品分类', maxHeight: 400}">
+                                      
+            <option value="10063">内衣馆</option>
+            <option value="10064">大牌文胸</option>
+            <option value="10065">自营内衣</option>
+            <option value="10066">内衣爆款</option>
+            <option value="10067">女士围巾/披肩</option>
+            <option value="10068">配饰馆</option>
+            <option value="10009">箱包手袋</option>
+            <option value="10075">拉杆箱</option>
+            <option value="10076">时尚男包</option>
+            <option value="10077">男士腰带</option>
+            <option value="10078">男包上新</option>
+            <option value="10079">自营女包</option>
+            <option value="10080">新款双肩包</option>
+        </select>
+                                    <small class="am-margin-left-xs">
+                                        <a href="index.php?s=/store/goods.category/add">去添加</a>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品图片 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <div class="am-form-file">
+                                        <div class="am-form-file">
+                                            <button type="button"
+                                                    class="upload-file1 am-btn am-btn-secondary am-radius">
+                                                <i class="am-icon-cloud-upload"></i> 选择图片
+                                            </button>
+                                            <div class="uploader-list am-cf">
+    
+                                            </div>
+
+                                        </div>
+                                        <div class="help-block am-margin-top-sm">
+                                            <small>尺寸750x750像素以上，大小2M以下 (可拖拽图片调整显示顺序 )</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">商品卖点 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <input type="text" class="tpl-form-input" name="goods[selling_point]" value="">
+                                    <small>选填，商品卖点简述，例如：此款商品美观大方 性价比较高 不容错过</small>
+                                </div>
+                            </div>
+
+                            <div class="widget-head am-cf">
+                                <div class="widget-title am-fl">规格/库存</div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品规格 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <label class="am-radio-inline">
+                                        <input type="radio" name="goods[spec_type]" value="10" data-am-ucheck checked>
+                                        单规格
+                                    </label>
+                                    <label class="am-radio-inline">
+                                        <input type="radio" name="goods[spec_type]" value="20" data-am-ucheck>
+                                        <span>多规格</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 商品多规格 -->
+                            <div id="many-app" v-cloak class="goods-spec-many am-form-group">
+                                <div class="goods-spec-box am-u-sm-9 am-u-sm-push-2 am-u-end">
+                                    <!-- 规格属性 -->
+                                    <div class="spec-attr">
+                                        <div v-for="(item, index) in spec_attr" class="spec-group-item">
+                                            <div class="spec-group-name">
+                                                <span>{{ item.group_name }}
+
+<input type="hidden" v-bind:name="
+
+'goods[spec]['+item.group_id+'][spec_id]'
+
+" v-bind:value="item.group_id">
+                                                </span>
+                                               
+                                                
+                                                <i @click="onDeleteGroup(index)"
+                                                   class="spec-group-delete iconfont icon-shanchu1" title="点击删除"></i>
+                                            </div>
+                                            <div class="spec-list am-cf">
+                                                <div v-for="(val, i) in item.spec_items" class="spec-item am-fl">
+                                                    <span>{{ val.spec_value }}</span>
+                                                    <input type="hidden" v-bind:name="
+
+'goods[spec]['+item.group_id+'][child][]'
+
+" v-bind:value="val.item_id">
+                                                     
+                                                    <i @click="onDeleteValue(index, i)"
+                                                       class="spec-item-delete iconfont icon-shanchu1" title="点击删除"></i>
+                                                </div>
+                                                <div class="spec-item-add am-cf am-fl">
+                                                    <input type="text" v-model="item.tempValue"
+                                                           class="ipt-specItem am-fl am-field-valid">
+                                                    <button @click="onSubmitAddValue(index)" type="button"
+                                                            class="am-btn am-fl">添加
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 添加规格组：按钮 -->
+                                    <div v-if="showAddGroupBtn" class="spec-group-button">
+                                        <button @click="onToggleAddGroupForm" type="button"
+                                                class="am-btn">添加规格
+                                        </button>
+                                    </div>
+
+                                    <!-- 添加规格：表单 -->
+                                    <div v-if="showAddGroupForm" class="spec-group-add">
+                                        <div class="spec-group-add-item am-form-group">
+                                            <label class="am-form-label form-require">规格名 </label>
+                                            <input type="text" class="input-specName tpl-form-input"
+                                                   v-model="addGroupFrom.specName"
+                                                   placeholder="请输入规格名称">
+                                        </div>
+                                        <div class="spec-group-add-item am-form-group">
+                                            <label class="am-form-label form-require">规格值 </label>
+                                            <input type="text" class="input-specValue tpl-form-input"
+                                                   v-model="addGroupFrom.specValue"
+                                                   placeholder="请输入规格值">
+                                        </div>
+                                        <div class="spec-group-add-item am-margin-top">
+                                            <button @click="onSubmitAddGroup" type="button"
+                                                    class="am-btn am-btn-xs am-btn-secondary"> 确定
+                                            </button>
+                                            <button @click="onToggleAddGroupForm" type="button"
+                                                    class="am-btn am-btn-xs am-btn-default"> 取消
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- 商品多规格sku信息 -->
+                                    <div v-if="spec_list.length > 0" class="goods-sku am-scrollable-horizontal">
+                                        <!-- 分割线 -->
+                                        <div class="goods-spec-line am-margin-top-lg am-margin-bottom-lg"></div>
+                                        <!-- sku 批量设置 -->
+                                        <div class="spec-batch am-form-inline">
+                                            <div class="am-form-group">
+                                                <label class="am-form-label">批量设置</label>
+                                            </div>
+                                            <div class="am-form-group">
+                                                <input type="text" v-model="batchData.goods_no" placeholder="商家编码">
+                                            </div>
+                                            <div class="am-form-group">
+                                                <input type="number" v-model="batchData.goods_price" placeholder="销售价">
+                                            </div>
+                                            <div class="am-form-group">
+                                                <input type="number" v-model="batchData.line_price" placeholder="划线价">
+                                            </div>
+                                            <div class="am-form-group">
+                                                <input type="number" v-model="batchData.stock_num" placeholder="库存数量">
+                                            </div>
+                                            <div class="am-form-group">
+                                                <input type="number" v-model="batchData.goods_weight" placeholder="重量">
+                                            </div>
+                                            <div class="am-form-group">
+                                                <button @click="onSubmitBatchData" type="button"
+                                                        class="am-btn am-btn-sm am-btn-secondaryam-radius">确定
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- sku table -->
+                                        <table class="spec-sku-tabel am-table am-table-bordered am-table-centered
+                                     am-margin-bottom-xs am-text-nowrap more-spec">
+                                            <tbody>
+                                            <tr>
+                                                <th v-for="item in spec_attr">{{ item.group_name }} 
+
+                                                </th>
+                                             
+                                                <th>商家编码</th>
+                                                <th>销售价</th>
+                                                <th>划线价</th>
+                                                <th>库存</th>
+                                                <th>重量(kg)</th>
+                                            </tr>
+                                            <tr v-for="(item, index) in spec_list" >
+<input type="hidden" name="goods[more][spec_value_id][]
+" v-bind:value="item.spec_sku_id">  
+                                                <td v-for="td in item.rows" class="td-spec-value am-text-middle"
+                                                    :rowspan="td.rowspan">
+                                                    {{ td.spec_value }}
+
+                                                </td>
+                                                
+                                                <td>
+  <input  type="text" class="ipt-goods-no " name="goods[more][goods_no][]"
+                                                           v-model="item.form.goods_no">
+                                                </td>
+                                                <td>
+                                                    <input type="number" class="ipt-w80" name="goods[more][goods_price][]"
+                                                           v-model="item.form.goods_price" required>
+                                                </td>
+                                                <td>
+                                                    <input type="number" class="ipt-w80" name="goods[more][line_price][]"
+                                                           v-model="item.form.line_price">
+                                                </td>
+                                                <td>
+                                                    <input type="number" class="ipt-w80" name="goods[more][stock_num][]"
+                                                           v-model="item.form.stock_num" required>
+                                                </td>
+                                                <td>
+                                                    <input type="number" class="ipt-w80" name="goods[more][goods_weight][]"
+                                                           v-model="item.form.goods_weight" required>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 商品单规格 -->
+                            <div class="goods-spec-single">
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label">商品编码 </label>
+                                    <div class="am-u-sm-9 am-u-end">
+                                        <input type="text" class="tpl-form-input" name="goods[sku][goods_no]"
+                                               value="">
+                                    </div>
+                                </div>
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品价格 </label>
+                                    <div class="am-u-sm-9 am-u-end">
+                                        <input type="number" class="tpl-form-input" name="goods[sku][goods_price]"
+                                                >
+                                    </div>
+                                </div>
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label">商品划线价 </label>
+                                    <div class="am-u-sm-9 am-u-end">
+                                        <input type="number" class="tpl-form-input" name="goods[sku][line_price]">
+                                    </div>
+                                </div>
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">当前库存数量 </label>
+                                    <div class="am-u-sm-9 am-u-end">
+                                        <input type="number" class="tpl-form-input" name="goods[sku][stock_num]"
+                                                >
+                                    </div>
+                                </div>
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品重量(Kg) </label>
+                                    <div class="am-u-sm-9 am-u-end">
+                                        <input type="number" class="tpl-form-input" name="goods[sku][goods_weight]"
+                                                >
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="widget-head am-cf">
+                                <div class="widget-title am-fl">商品详情</div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品详情 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <!-- 加载编辑器的容器 -->
+                                    <textarea id="container" name="goods[content]" type="text/plain"></textarea>
+                                </div>
+                            </div>
+                            <div class="widget-head am-cf">
+                                <div class="widget-title am-fl">其他设置</div>
+                            </div>
+                            
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品状态 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <label class="am-radio-inline">
+                                        <input type="radio" name="goods[goods_status]" value="10" data-am-ucheck
+                                               checked>
+                                        上架
+                                    </label>
+                                    <label class="am-radio-inline">
+                                        <input type="radio" name="goods[goods_status]" value="20" data-am-ucheck>
+                                        下架
+                                    </label>
+                                </div>
+                            </div>
+
+                           
+
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">初始销量</label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <input type="number" class="tpl-form-input" name="goods[sales_initial]"
+                                           value="0">
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品排序 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <input type="number" class="tpl-form-input" name="goods[goods_sort]"
+                                           value="100" required>
+                                    <small>数字越小越靠前</small>
+                                </div>
+                            </div>
+
+                          
+                            <!-- 表单提交按钮 -->
+                            <div class="am-form-group">
+                                <div class="am-u-sm-9 am-u-sm-push-3 am-margin-top-lg">
+                                    <button  type="submit" class="j-submit am-btn am-btn-secondary">提交
+                                    </button>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 图片文件列表模板 -->
+<script id="tpl-file-item" type="text/template">
+    {{ each list }}
+    <div class="file-item">
+        <a href="{{ $value.file_path }}" title="点击查看大图" target="_blank">
+            <img src="{{ $value.file_path }}">
+        </a>
+        <input type="hidden" name="{{ name }}" value="{{ $value.file_id }}">
+        <i class="iconfont icon-shanchu file-item-delete"></i>
+    </div>
+    {{ /each }}
+</script>
+
+
+
+
+<!-- 文件库弹窗 -->
+<!-- 文件库模板 -->
+ 
+    <div class="row" id="file-upload" style="display: none">
+        <div class="file-group">
+            <ul class="nav-new">
+                <li class="ng-scope active" data-group-id="-1">
+                    <a class="group-name am-text-truncate" href="javascript:void(0);" title="全部">全部</a>
+                </li>
+     
+            </ul>
+            
+        </div>
+        <div class="file-list">
+            <div class="v-box-header am-cf">
+                <div class="h-left am-fl am-cf">
+                    <div class="am-fl">
+                         
+                    </div>
+                    <div class="am-fl tpl-table-black-operation">
+                        <a href="javascript:void(0);" class="file-delete tpl-table-black-operation-del"
+                           data-group-id="2">
+                            <i class="am-icon-trash"></i> 删除
+                        </a>
+                    </div>
+                </div>
+                <div class="h-rigth am-fr">
+                    <button type="button" class="layui-btn" id="test1">
+                      <i class="layui-icon">&#xe67c;</i>上传图片
+                    </button>
+                </div>
+            </div>
+            <div id="file-list-body" class="v-box-body">
+                <ul class="file-list-item">
+
+                </ul>
+            </div>
+            <div class="v-box-footer am-cf"></div>
+        </div>
+    </div>
+ 
+
+<!-- 文件列表模板 -->
+<script id="tpl-file-list" type="text/template">
+    <ul class="file-list-item">
+        {{ include 'tpl-file-list-item' data }}
+    </ul>
+    {{ if last_page > 1 }}
+    <div class="file-page-box am-fr">
+        <ul class="pagination">
+            {{ if current_page > 1 }}
+            <li>
+                <a class="switch-page" href="javascript:void(0);" title="上一页" data-page="{{ current_page - 1 }}">«</a>
+            </li>
+            {{ /if }}
+            {{ if current_page < last_page }}
+            <li>
+                <a class="switch-page" href="javascript:void(0);" title="下一页" data-page="{{ current_page + 1 }}">»</a>
+            </li>
+            {{ /if }}
+        </ul>
+    </div>
+    {{ /if }}
+</script>
+
+<!-- 文件列表模板 -->
+  
+
+<!-- 分组元素-->
+<script id="tpl-group-item" type="text/template">
+    <li class="ng-scope" data-group-id="{{ group_id }}" title="{{ group_name }}">
+        <a class="group-edit" href="javascript:void(0);" title="编辑分组">
+            <i class="iconfont icon-bianji"></i>
+        </a>
+        <a class="group-name am-text-truncate" href="javascript:void(0);">
+            {{ group_name }}
+        </a>
+        <a class="group-delete" href="javascript:void(0);" title="删除分组">
+            <i class="iconfont icon-shanchu1"></i>
+        </a>
+    </li>
+</script>
+
+
+<script src="__PATH__/js/vue.min.js"></script>
+<script src="__PATH__/js/ddsort.js"></script>
+<script src="__PATH__/plugins/umeditor/umeditor.config.js?v=1.1.41"></script>
+<script src="__PATH__/plugins/umeditor/umeditor.min.js"></script>
+<script src="__PATH__/js/goods.spec.js?v=1.1.41"></script>
+<script>
+
+    $(function () {
+
+        // 富文本编辑器
+        UM.getEditor('container', {
+            initialFrameWidth: 375 + 15,
+            initialFrameHeight: 600
+        });
+
+        // 选择图片
+        $('.upload-file').selectImages({
+            name: 'goods[images][]'
+            , multiple: true
+        });
+
+        // 图片列表拖动
+        $('.uploader-list').DDSort({
+            target: '.file-item',
+            delay: 100, // 延时处理，默认为 50 ms，防止手抖点击 A 链接无效
+            floatStyle: {
+                'border': '1px solid #ccc',
+                'background-color': '#fff'
+            }
+        });
+
+        // 切换单/多规格
+        $('input:radio[name="goods[spec_type]"]').change(function (e) {
+            var $goodsSpecMany = $('.goods-spec-many')
+                , $goodsSpecSingle = $('.goods-spec-single');
+            if (e.currentTarget.value === '10') {
+                $goodsSpecMany.hide() && $goodsSpecSingle.show();
+            } else {
+                $goodsSpecMany.show() && $goodsSpecSingle.hide();
+            }
+        });
+
+        // 注册商品多规格组件
+        var specMany = new GoodsSpec({
+            el: '#many-app'
+        });
+
+//商品添加
+var form = $('#my-form')
+form.submit(function () {
+
+    //$('.j-submit').attr('disabled', true)
+     
+    $.post("{:url('addData')}",$("#my-form").serialize(),
+        function(result){
+            if(result.status == 200){
+                $.show_success(result.msg, result.url)
+            }else{
+                $.show_error(result.msg)
+            }
+            //$('.j-submit').attr('disabled', false)
+        },'json')
+    return false
+   })
+})
+</script>
+
+    </div>
+    <!-- 内容区域 end -->
+
+</div>
+<script src="__PATH__/js/layer.js"></script>
+<script src="__PATH__/js/jquery.form.min.js"></script>
+<script src="__PATH__/js/amazeui.min.js"></script>
+<script src="__PATH__/js/webuploader.html5only.js"></script>
+<script src="__PATH__/js/art-template.js"></script>
+<script src="__PATH__/js/app.js?v=1.1.41"></script>
+<script src="__PATH__/js/file.library.js?v=1.1.41"></script>
+<script src="__PATH__/layui/layui.js"></script>
+<script type="text/javascript">
+//存放选择的图片
+var arr = []
+
+$('.upload-file1').click(function(){
+    //打开弹窗
+    layer.open({
+      type: 1, 
+      skin:'file-library',
+      area: ['850px', '650px'],
+      btn: ['确认', '取消'],
+      content: $('#file-upload'),
+      yes:function(index, layero){
+       
+        var str = ''
+        //数组.length 获取数组的长度
+        for (var i = 0; i<arr.length; i++) {
+           str+='<div class="file-item">'
+            str+='<img src="'+arr[i]['src']+'">'
+            str+='<input type="hidden" name="goods[images][]" value="'+arr[i]['id']+'">'
+            str+='<i class="iconfont icon-shanchu file-item-delete"></i>'
+            str+='</div>'
+        }
+
+        $('.uploader-list').append(str)
+        layer.close(index); //关闭窗口
+      }
+    });
+})
+
+
+layui.use('upload', function(){
+  var $ = layui.jquery
+  ,upload = layui.upload;
+//多图片上传
+
+  upload.render({
+    elem: '#test1'
+    ,url: '{:url("ImgUpload/add")}' //改成您自己的上传接口
+    ,multiple: true
+    ,before: function(obj){
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        console.log(file)
+        var str = '';
+        str += '<li class="ng-scope" title="'+file.name+'" data-file-id="" data-file-path="'+result+'">';
+        str += '<div class="img-cover"style="background-image:'
+        str += "url('"+result+"')"
+        str += '"">'
+        str += '</div>';
+        str += '<p class="file-name am-text-center am-text-truncate">'+file.name+'</p>'
+        str += '<div class="select-mask">'
+        str += '<img src="__PATH__/assets/store/img/chose.png">'
+        str += '</div>'
+        str += '</li>'
+        $('#file-list-body .file-list-item').append(str)
+      });
+    }
+    ,done: function(res){
+      //上传完毕
+      //last() 找最后一个标签
+      //attr('属性名', 值)
+      $('.ng-scope').last().attr('data-file-id', res.id)
+      //console.log()
+      //console.log(res.id)
+    }
+  });
+ });
+ 
+ //选择图片 打钩
+ $('#file-list-body').on('click', '.ng-scope', function(){
+    $(this).toggleClass('active')
+    
+    if($(this).hasClass('active')){
+        //数组.push(值)  给数组增加值
+        //js数组下标数字   对象属性名自定义
+        var val = {
+                    id: $(this).attr('data-file-id'),
+                    src:$(this).attr('data-file-path')
+                  }
+        arr.push(val)
+    }else{
+        //将数组内的指定结果删掉
+        for (var i = 0; i<arr.length; i++) {
+            if(arr[i].id == $(this).attr('data-file-id'))
+                //删除数组中的这个值
+                alert()
+        }
+    }
+ })
+
+ $('.uploader-list').on('click', '.file-item-delete', function(){
+    var that = $(this)
+    layer.confirm('确定要删除该图片吗？'
+                , {title: '友情提示'}
+                , function (index) {
+                    that.parent().remove()
+                     layer.close(index);
+                })
+    
+ })
+
+var app = new Vue({
+  el: '#sadsadsadas',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+ 
+</script>
+ 
+</body>
+<!-- 步骤:
+    1. 打开layui官网
+    2. 项目中找到上传文件弹窗的html,删除外部的script,给最外面的div加隐藏,加id
+    3. layui官网找到弹窗 type:1  content:$('#刚刚的id')
+    4. 加skin: file-library 页面就有样式了
+    5. layui找到上传代码,下载layui文件,放到静态资源目录下
+    6. 按照layui提供的案例 
+        引css 
+        引js  
+        复制上传按钮替换
+        复制js -->
+
+ <!--    图片选择流程
+    1. 上传
+    2. 打钩选择, 打钩选择事件内将选择的li,装进数组
+    3. 点击确认,在确认方法中,遍历数组,拼接,显示到页面上
+
+    关闭弹窗
+     layer.close(index);
+    删除图片
+     找到删除按钮加click事件, 删除它的父元素
+    点击按钮打开弹窗
+     找到按钮,改变 upload-file 为自定义的值
+     给自定义值click时间,将弹窗放进去
+
+     添加商品与图片的关联
+      商品图片表 id  商品id  图片id
+      提交商品的时候,同时提交图片id,存表 -->
+</html>
+
+
+ 

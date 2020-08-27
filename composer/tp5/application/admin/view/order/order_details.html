@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>萤火小程序商城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="icon" type="image/png" href="favicon.ico"/>
+    <meta name="apple-mobile-web-app-title" content="萤火小程序商城"/>
+    <link rel="stylesheet" href="__PATH__/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="__PATH__/css/app.css?v=1.1.41"/>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_783249_m68ye1gfnza.css">
+    <script src="__PATH__/js/jquery.min.js"></script>
+    <script src="https://at.alicdn.com/t/font_783249_e5yrsf08rap.js"></script>
+    <script>
+        BASE_URL = 'https://demo.yiovo.com/';
+        STORE_URL = 'index.php?s=/store';
+    </script>
+</head>
+
+<body data-type="">
+<div class="am-g tpl-g">
+    <!-- 头部 -->
+    <header class="tpl-header">
+        <!-- 右侧内容 -->
+        <div class="tpl-header-fluid">
+            <!-- 侧边切换 -->
+            <div class="am-fl tpl-header-button switch-button">
+                <i class="iconfont icon-menufold"></i>
+            </div>
+            <!-- 刷新页面 -->
+            <div class="am-fl tpl-header-button refresh-button">
+                <i class="iconfont icon-refresh"></i>
+            </div>
+            <!-- 其它功能-->
+            <div class="am-fr tpl-header-navbar">
+                <ul>
+                    <!-- 商业版介绍 -->
+                    <li class="am-text-sm tpl-header-navbar-welcome">
+                        <a href="index.php?s=/pro" style="font-size: 1.3rem; color: #166bef">商业版介绍
+                        </a>
+                    </li>
+                    <!-- 欢迎语 -->
+                    <li class="am-text-sm tpl-header-navbar-welcome">
+                        <a href="index.php?s=/store/store.user/renew">欢迎你，<span>admin</span>
+                        </a>
+                    </li>
+                    <!-- 退出 -->
+                    <li class="am-text-sm">
+                        <a href="javascript:void(0);">
+                            <i class="iconfont icon-tuichu"></i> 退出
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- 侧边导航栏 -->
+    <div class="left-sidebar dis-flex">
+                <div class="sidebar-scroll">
+            <!-- 一级菜单 -->
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-heading">萤火小程序商城</li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/index/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-home"
+                                   style=""></i>
+                                                        首页                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/store.user/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-guanliyuan"
+                                   style=""></i>
+                                                        管理员                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/goods/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-goods"
+                                   style=""></i>
+                                                        商品管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/order/all_list"
+                           class="active">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-order"
+                                   style=""></i>
+                                                        订单管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/user/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-user"
+                                   style=""></i>
+                                                        用户管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/shop/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-shop"
+                                   style=""></i>
+                                                        门店管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/content.article/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-wenzhang"
+                                   style=""></i>
+                                                        内容管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/market.coupon/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-marketing"
+                                   style=""></i>
+                                                        营销管理                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/statistics.data/index"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-qushitu"
+                                   style=""></i>
+                                                        数据统计                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/wxapp/setting"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-wxapp"
+                                   style="color:#36b313;"></i>
+                                                        小程序                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/apps.dealer.apply/index"
+                           class="">
+                                                            <svg class="icon sidebar-nav-link-logo" aria-hidden="true">
+                                    <use xlink:href="#icon-application"></use>
+                                </svg>
+                                                        应用中心                        </a>
+                    </li>
+                                    <li class="sidebar-nav-link">
+                        <a href="index.php?s=/store/setting/store"
+                           class="">
+                                                            <i class="iconfont sidebar-nav-link-logo icon-setting"
+                                   style=""></i>
+                                                        设置                        </a>
+                    </li>
+                            </ul>
+        </div>
+        <!-- 子级菜单-->
+                    <div class="sidebar-second-scroll">
+                <ul class="left-sidebar-second">
+                    <li class="sidebar-second-title">订单管理</li>
+                    <li class="sidebar-second-item">
+                                                        <!-- 二级菜单-->
+                                <a href="index.php?s=/store/order/all_list"
+                                   class="">
+                                    全部订单                                </a>
+                                                            <!-- 二级菜单-->
+                                <a href="index.php?s=/store/order/delivery_list"
+                                   class="">
+                                    待发货                                </a>
+                                                            <!-- 二级菜单-->
+                                <a href="index.php?s=/store/order/receipt_list"
+                                   class="">
+                                    待收货                                </a>
+                                                            <!-- 二级菜单-->
+                                <a href="index.php?s=/store/order/pay_list"
+                                   class="">
+                                    待付款                                </a>
+                                                            <!-- 二级菜单-->
+                                <a href="index.php?s=/store/order/complete_list"
+                                   class="">
+                                    已完成                                </a>
+                                                            <!-- 二级菜单-->
+                                <a href="index.php?s=/store/order/cancel_list"
+                                   class="">
+                                    已取消                                </a>
+                                                            <!-- 二级菜单-->
+                                <a href="index.php?s=/store/order.refund/index"
+                                   class="">
+                                    售后管理                                </a>
+                                                </li>
+                </ul>
+            </div>
+            </div>
+
+    <!-- 内容区域 start -->
+    <div class="tpl-content-wrapper ">
+        <div class="row-content am-cf">
+    <div class="row">
+        <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+            <div class="widget am-cf">
+                <div class="widget__order-detail widget-body am-margin-bottom-lg">
+
+                    <!-- 订单进度步骤条 -->
+                    <div class="am-u-sm-12">
+                                                <ul class="order-detail-progress progress-5">
+                            <li>
+                                <span>下单时间</span>
+                                <div class="tip">2018-08-02 17:43:39</div>
+                            </li>
+                            <li>
+                                <span>付款</span>
+                                                                    <div class="tip">
+                                        付款于 2018-08-02 17:43:45                                    </div>
+                                                            </li>
+                            <li>
+                                <span>发货</span>
+                                                                    <div class="tip">
+                                        发货于 2018-10-28 13:09:01                                    </div>
+                                                            </li>
+                            <li>
+                                <span>收货</span>
+                                                                    <div class="tip">
+                                        收货于 2018-11-12 13:40:51                                    </div>
+                                                            </li>
+                            <li>
+                                <span>完成</span>
+                                                                    <div class="tip">
+                                        完成于 2018-11-12 13:40:51                                    </div>
+                                                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 基本信息 -->
+                    <div class="widget-head am-cf">
+                        <div class="widget-title am-fl">基本信息</div>
+                    </div>
+                    <div class="am-scrollable-horizontal">
+                        <table class="regional-table am-table am-table-bordered am-table-centered
+                            am-text-nowrap am-margin-bottom-xs">
+                            <tbody>
+                            <tr>
+                                <th>订单号</th>
+                                <th>买家</th>
+                                <th>订单金额</th>
+                                <th>支付方式</th>
+                                <th>配送方式</th>
+                                <th>交易状态</th>
+                                                            </tr>
+                            <tr>
+                                <td>2018080298545157</td>
+                                <td>
+                                    <p>下一个自己</p>
+                                    <p class="am-link-muted">(用户id：10226)</p>
+                                </td>
+                                <td class="">
+                                    <div class="td__order-price am-text-left">
+                                        <ul class="am-avg-sm-2">
+                                            <li class="am-text-right">订单总额：</li>
+                                            <li class="am-text-right">￥1.00 </li>
+                                        </ul>
+                                                                                <ul class="am-avg-sm-2">
+                                            <li class="am-text-right">运费金额：</li>
+                                            <li class="am-text-right">+￥0.00</li>
+                                        </ul>
+                                                                                <ul class="am-avg-sm-2">
+                                            <li class="am-text-right">实付款金额：</li>
+                                            <li class="x-color-red am-text-right">
+                                                ￥1.00</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="am-badge am-badge-secondary">微信支付</span>
+                                </td>
+                                <td>
+                                    <span class="am-badge am-badge-secondary">快递配送</span>
+                                </td>
+                                <td>
+                                    <p>付款状态：
+                                        <span class="am-badge
+                                        am-badge-success">
+                                                已付款</span>
+                                    </p>
+                                    <p>发货状态：
+                                        <span class="am-badge
+                                        am-badge-success">
+                                                已发货</span>
+                                    </p>
+                                    <p>收货状态：
+                                        <span class="am-badge
+                                        am-badge-success">
+                                                已收货</span>
+                                    </p>
+                                                                    </td>
+                                                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 商品信息 -->
+                    <div class="widget-head am-cf">
+                        <div class="widget-title am-fl">商品信息</div>
+                    </div>
+                    <div class="am-scrollable-horizontal">
+                        <table class="regional-table am-table am-table-bordered am-table-centered
+                            am-text-nowrap am-margin-bottom-xs">
+                            <tbody>
+                            <tr>
+                                <th>商品名称</th>
+                                <th>商品编码</th>
+                                <th>重量(Kg)</th>
+                                <th>单价</th>
+                                <th>购买数量</th>
+                                <th>商品总价</th>
+                            </tr>
+                                                            <tr>
+                                    <td class="goods-detail am-text-middle" width="30%">
+                                        <div class="goods-image">
+                                            <img src="http://static.yoshop.xany6.com/201808011200282d83e3838.jpg" alt="">
+                                        </div>
+                                        <div class="goods-info">
+                                            <p class="goods-title">萤火付款演示</p>
+                                            <p class="goods-spec am-link-muted">
+                                                官方客服QQ：:1361545828;                                             </p>
+                                        </div>
+                                    </td>
+                                    <td>--</td>
+                                    <td>1</td>
+                                    <td>
+                                        <p class="">
+                                            <span>￥1.00</span>
+                                        </p>
+                                                                            </td>
+                                    <td>×1</td>
+                                    <td>￥1.00</td>
+                                </tr>
+                                                        <tr>
+                                <td colspan="6" class="am-text-right am-cf">
+                                    <span class="am-fl">买家留言：无</span>
+                                    <span class="am-fr">总计金额：￥1.00</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 收货信息 -->
+                                            <div class="widget-head am-cf">
+                            <div class="widget-title am-fl">收货信息</div>
+                        </div>
+                        <div class="am-scrollable-horizontal">
+                            <table class="regional-table am-table am-table-bordered am-table-centered
+                            am-text-nowrap am-margin-bottom-xs">
+                                <tbody>
+                                <tr>
+                                    <th>收货人</th>
+                                    <th>收货电话</th>
+                                    <th>收货地址</th>
+                                </tr>
+                                <tr>
+                                    <td>付费</td>
+                                    <td>13471121121</td>
+                                    <td>
+                                        北京市                                        北京市                                        东城区                                        发发发                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                    <!-- 自提门店信息 -->
+                    
+                    <!-- 付款信息 -->
+                                            <div class="widget-head am-cf">
+                            <div class="widget-title am-fl">付款信息</div>
+                        </div>
+                        <div class="am-scrollable-horizontal">
+                            <table class="regional-table am-table am-table-bordered am-table-centered
+                                am-text-nowrap am-margin-bottom-xs">
+                                <tbody>
+                                <tr>
+                                    <th>应付款金额</th>
+                                    <th>支付方式</th>
+                                    <th>支付流水号</th>
+                                    <th>付款状态</th>
+                                    <th>付款时间</th>
+                                </tr>
+                                <tr>
+                                    <td>￥1.00</td>
+                                    <td>微信支付</td>
+                                    <td>4200000135201808020290121628</td>
+                                    <td>
+                                        <span class="am-badge
+                                        am-badge-success">
+                                                已付款</span>
+                                    </td>
+                                    <td>
+                                        2018-08-02 17:43:45                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                    <!--  用户取消订单 -->
+                    
+                    <!-- 发货信息 -->
+					
+					 
+                                    </tbody>
+                                </table>
+                            </div>
+                        
+                    <!-- 门店自提核销 -->
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- 后台改价模板 -->
+<script id="tpl-update-price" type="text/template">
+    <div class="am-padding-top-sm">
+        <form class="form-update-price am-form tpl-form-line-form" method="post"
+              action="index.php?s=/store/order/updateprice/order_id/10096">
+            <div class="am-form-group">
+                <label class="am-u-sm-3 am-form-label"> 订单金额 </label>
+                <div class="am-u-sm-9">
+                    <input type="number" min="0.00" class="tpl-form-input" name="order[update_price]"
+                           value="{{ order_price }}">
+                    <small>最终付款价 = 订单金额 + 运费金额</small>
+                </div>
+            </div>
+            <div class="am-form-group">
+                <label class="am-u-sm-3 am-form-label"> 运费金额 </label>
+                <div class="am-u-sm-9">
+                    <input type="number" min="0.00" class="tpl-form-input" name="order[update_express_price]"
+                           value="{{ express_price }}">
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+
+<script>
+    $(function () {
+
+        /**
+         * 修改价格
+         */
+        $('.j-update-price').click(function () {
+            var data = $(this).data();
+            $.showModal({
+                title: '订单价格修改'
+                , content: template('tpl-update-price', data)
+                , yes: function () {
+                    // 表单提交
+                    $('.form-update-price').ajaxSubmit({
+                        type: "post",
+                        dataType: "json",
+                        success: function (result) {
+                            result.code === 1 ? $.show_success(result.msg, result.url)
+                                : $.show_error(result.msg);
+                        }
+                    });
+                }
+            });
+        });
+
+        /**
+         * 表单验证提交
+         * @type {*}
+         */
+        $('.my-form').superForm();
+		
+		$('.j-submit').click(function () {
+            $.show_success('成功', 'order_details.html')
+            //$.show_error('成功');
+                     
+        });
+
+    });
+</script>
+
+    </div>
+    <!-- 内容区域 end -->
+
+</div>
+<script src="__PATH__/js/layer.js"></script>
+<script src="__PATH__/js/jquery.form.min.js"></script>
+<script src="__PATH__/js/amazeui.min.js"></script>
+<script src="__PATH__/js/webuploader.html5only.js"></script>
+<script src="__PATH__/js/art-template.js"></script>
+<script src="__PATH__/js/app.js?v=1.1.41"></script>
+<script src="__PATH__/js/file.library.js?v=1.1.41"></script>
+</body>
+
+</html>

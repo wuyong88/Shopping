@@ -1,0 +1,575 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=8" />
+    <title>Bombin男装商城首页</title>
+    <link rel="stylesheet" type="text/css" href="__HOME__/css/common.css">
+    <link rel="stylesheet" type="text/css" href="__HOME__/css/header.css">
+    <link rel="stylesheet" type="text/css" href="__HOME__/css/index.css">
+	<link rel="stylesheet" type="text/css" href="__HOME__/css/concept.css">
+	<link rel="stylesheet" type="text/css" href="__HOME__/css/botnav.css">
+    <link rel="stylesheet" type="text/css" href="__HOME__/css/footer.css">
+    <script src="__HOME__/js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+
+<div class="header">
+	<div class="top"><!--顶部导航栏-->
+		<div class="topnav">
+			<ul class="left"><!--顶部左边-->
+				<li class="li01"><a href="javascript:vido(0);">收藏红豆</a></li>
+				<li class="li02"><a href="javascript:vido(0);">关注微博</a></li>
+				<li class="li03"><a href="javascript:vido(0);">手机商城</a></li>
+				<li class="li04"><a href="javascript:vido(0);">咨询电话:</a><span>400-602-1112</span></li>
+				<p class="cle"></p>
+			</ul>
+			<ul class="right"><!--顶部右边-->
+
+				<div>{$Think.session.user_info_home.mobile|default="亲"}，欢迎来到Bombin男装商城！</div>
+
+                {if !$Think.session.user_info_home}
+				<li><a href="{:url('login/login')}">【登陆】</a></li>
+				<li><a href="{:url('login/regsiter')}">【注册】</a></li>
+                {else}
+                <li><a href="{:url('login/loginOut')}">【退出】</a></li>
+                {/if}
+
+				<li id="My"><a href="member.html">我的Bombin ∨</a></li>
+				<li class="help"><a href="javascript:vido(0);">帮助中心</a></li>
+				<p class="cle"></p>
+			</ul>
+			<p class="cle"></p>
+		</div>
+	</div>	
+	<div class="mid"><!--顶部内容区-->
+		<div class="box">
+			<div class="logo">
+                <a href="index.html">
+                    <img src="__HOME__/images/logo.png">Bombin男装商城
+                </a>
+            </div>
+			<div class="right">
+				<div class="search">
+				<form action="" method="">
+					<input class="text" type="text" size="20" />
+					<button>搜索</button>
+				</form>							
+				</div>				
+				<div class="gwc">
+					<a href="shopping.html">我的购物车</a>
+					<div id="number">0</div>
+				</div>
+				<p class="cle"></p>
+				<ul class="hot">
+					<li class="li01"><a href="javascript:vido(0);">衬衫</a></li>
+					<li class="li02"><a href="javascript:vido(0);">外套</a></li>
+					<li class="li03"><a href="javascript:vido(0);">童装</a></li>
+					<li class="li04"><a href="javascript:vido(0);">秋季热卖</a></li>
+					<li class="li05"><a href="javascript:vido(0);">红豆杉</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="nav"><!--导航栏-->
+			<div id="all">
+				<a href="javascript:vido(0);">全部商品分类<span>∨</span></a>
+				<ul id="leftsidebar">
+
+                    {foreach $cate_list as $k=>$v}
+					<li class="li0{$k+1}">
+						{$v.name}
+						<div>
+                        {foreach $v.child as $key=>$value}
+<a {if $key eq 0}class="a01"{/if} href="{:url('goods/list', ['cate_id'=>$value.id])}">{$value.name}</a>
+                        {/foreach}
+						</div>
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				{foreach $menu_list as $v}
+                <li><a href="{$v.url}">{$v.name}</a></li>
+				 {/foreach}
+				<p class="cle"></p>
+			</ul>
+			<p class="cle"></p>
+		</div>
+	</div>	
+</div>
+
+<div class="content">
+
+<div class="banner"><!--首页banner-->
+<div id="banner">
+    <ul id="img">
+        <li class="now">
+            <a href="javascript:vdio(0);"><img src="__HOME__/images/banner1.jpg"></a>
+            <a class="a1" href="javascript:vdio(0);">SHOP NOW >></a>
+        </li>
+        <li>
+            <a href="javascript:vdio(0);"><img src="__HOME__/images/banner2.jpg"></a>
+            <a class="a2" href="javascript:vdio(0);">SHOP NOW >></a>
+        </li>
+        <li>
+            <a href="javascript:vdio(0);"><img src="__HOME__/images/banner3.jpg"></a>
+            <a class="a3" href="javascript:vdio(0);">SHOP NOW >></a>
+        </li>
+    </ul>
+    <ul id="icon">
+        <li class="now"></li>
+        <li></li>
+        <li></li>
+        <p class="cle"></p>
+    </ul>
+</div>
+</div>
+
+<div class="column01"><!--品牌热卖选部分-->
+    <div class="left" id="left">
+        <ul id="coltit"><!--品牌热卖选项卡-->
+            <li><a href="javascript:vido(0);">品牌特卖</a></li>
+            <li><a href="javascript:vido(0);">热门商品</a></li>
+            <li class="now"><a href="javascript:vido(0);">爆款推荐</a></li>
+            <p class="cle"></p>
+        </ul>               
+    </div>
+    <div id="leftbox"><!--品牌热卖内容-->
+        <ul>
+            <div class="d1"><!--品牌1-->
+                <a href="Product introduction.html">
+                <div class="Img">
+                    <span class="s1">韩版时尚</span>
+                    <span class="s2">套装卫衣男</span>
+                    <span class="s3">专柜价:￥119</span>
+                    <img src="__HOME__/images/selling01.png"/>
+                </div>
+                <div class="sellinglogo">                    
+                    <img src="__HOME__/images/sellinglogo01.png" />                    
+                </div> 
+                </a>                   
+            </div>
+            <div class="d2"><!--品牌2-->
+                <a href="Product introduction.html">
+                <div class="Img">
+                    <span class="s1">韩版时尚</span>
+                    <span class="s2">青年运动套装</span>
+                    <span class="s3">专柜价:￥119</span>
+                    <img src="__HOME__/images/selling04.png"/>
+                </div>
+                <div class="sellinglogo">                    
+                    <img src="__HOME__/images/sellinglogo04.png" />                    
+                </div>
+                </a> 
+            </div>
+            <div class="d3"><!--品牌3-->
+                <a href="Product introduction.html">
+                <div class="Img">
+                    <span class="s1">韩版时尚</span>
+                    <span class="s2">青年棒球服</span>
+                    <span class="s3">专柜价:￥119</span>
+                    <img src="__HOME__/images/selling03.png"/>
+                </div>
+                <div class="sellinglogo">                    
+                    <img src="__HOME__/images/sellinglogo03.png" />
+                </div>
+                </a> 
+            </div>
+            <div class="d4"><!--品牌4-->
+                <a href="Product introduction.html">
+                <div class="Img">
+                    <span class="s1">韩版时尚</span>
+                    <span class="s2">青年个性T恤</span>
+                    <span class="s3">专柜价:￥119</span>
+                    <img src="__HOME__/images/selling02.png"/>
+                </div>
+                <div class="sellinglogo">
+                    <img src="__HOME__/images/sellinglogo02.png" />
+                </div>
+                </a> 
+            </div>
+        </ul>
+        <ul>
+            <div class="d1"><!--品牌1-->
+                <a href="Product introduction.html">
+                <div class="Img">
+                    <span class="s1">韩版时尚</span>
+                    <span class="s2">套装卫衣男</span>
+                    <span class="s3">专柜价:￥119</span>
+                    <img src="__HOME__/images/selling04.png"/>
+                </div>
+                <div class="sellinglogo">
+                    <img src="__HOME__/images/sellinglogo04.png" />
+                </div>
+                </a>                    
+            </div>
+            <div class="d2"><!--品牌2-->
+                <a href="Product introduction.html">
+                <div class="Img">
+                    <span class="s1">韩版时尚</span>
+                    <span class="s2">青年运动套装</span>
+                    <span class="s3">专柜价:￥119</span>
+                    <img src="__HOME__/images/selling02.png"/>
+                </div>
+                <div class="sellinglogo">
+                    <img src="__HOME__/images/sellinglogo02.png" />
+                </div>
+                </a> 
+            </div>
+            <div class="d3"><!--品牌3-->
+                <a href="Product introduction.html">
+                <div class="Img">
+                    <span class="s1">韩版时尚</span>
+                    <span class="s2">青年棒球服</span>
+                    <span class="s3">专柜价:￥119</span>
+                    <img src="__HOME__/images/selling01.png"/>
+                </div>
+                <div class="sellinglogo">
+                    <img src="__HOME__/images/sellinglogo01.png" />
+                </div>
+                </a> 
+            </div>
+            <div class="d4"><!--品牌4-->
+                <a href="Product introduction.html">
+                <div class="Img">
+                    <span class="s1">韩版时尚</span>
+                    <span class="s2">青年个性T恤</span>
+                    <span class="s3">专柜价:￥119</span>
+                    <img src="__HOME__/images/selling03.png"/>
+                </div>
+                <div class="sellinglogo">
+                    <img src="__HOME__/images/sellinglogo03.png" />
+                </div>
+                </a> 
+            </div>
+        </ul>
+        <ul class="now">
+            <div class="d1"><!--品牌1-->
+                <a href="Product introduction.html">
+                <div class="Img">
+                    <span class="s1">韩版时尚</span>
+                    <span class="s2">套装卫衣男</span>
+                    <span class="s3">专柜价:￥119</span>
+                    <img src="__HOME__/images/selling01.png"/>
+                </div>
+                <div class="sellinglogo">
+                    <img src="__HOME__/images/sellinglogo01.png" />
+                </div>
+                </a>                    
+            </div>
+            <div class="d2"><!--品牌2-->
+                <a href="Product introduction.html">
+                <div class="Img">
+                    <span class="s1">韩版时尚</span>
+                    <span class="s2">青年运动套装</span>
+                    <span class="s3">专柜价:￥119</span>
+                    <img src="__HOME__/images/selling02.png"/>
+                </div>
+                <div class="sellinglogo">
+                    <img src="__HOME__/images/sellinglogo02.png" />
+                </div>
+                </a>
+            </div>
+            <div class="d3"><!--品牌3-->
+                <a href="Product introduction.html">
+                <div class="Img">
+                    <span class="s1">韩版时尚</span>
+                    <span class="s2">青年棒球服</span>
+                    <span class="s3">专柜价:￥119</span>
+                    <img src="__HOME__/images/selling03.png"/>
+                </div>
+                <div class="sellinglogo">
+                    <img src="__HOME__/images/sellinglogo03.png" />
+                </div>
+                </a> 
+            </div>
+            <div class="d4"><!--品牌4-->
+                <a href="Product introduction.html">
+                <div class="Img">
+                    <span class="s1">韩版时尚</span>
+                    <span class="s2">青年个性T恤</span>
+                    <span class="s3">专柜价:￥119</span>
+                    <img src="__HOME__/images/selling04.png"/>
+                </div>
+                <div class="sellinglogo">
+                    <img src="__HOME__/images/sellinglogo04.png" />
+                </div>
+                </a> 
+            </div>
+        </ul>			
+    </div>
+    <div class="right"><!--右边头条部分-->
+        <div class="top">商城头条<a href="javascript:vdio(0);">更多></a></div>
+        <div class="mid">
+            <p><a href="javascript:vdio(0);">“迎中秋,庆国庆”商...</a></p>
+            <p><a href="javascript:vdio(0);">Bombin自营电商转型新跨..</a></p>
+            <p><a href="javascript:vdio(0);">Bom七夕节——中国...</a></p>
+        </div>
+        <div class="bot">
+            <a href="javascript:vdio(0);"><img src="__HOME__/images/headnw.gif"/></a>
+            <div>
+                <a class="a1" href="javascript:vdio(0);">男士全棉袜子</a>
+                <a class="a2" href="javascript:vdio(0);">48元贴心价</a>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="column02"><!--当季热卖部分-->
+    <div class="title"><!--标题-->
+        <div>当季热卖<span> NEW SEASON</span></div>
+        <a href="javascript:vdio(0);">查看更多>></a>
+        <p class="cle"></p>
+    </div> 
+    <ul><!--当季热卖内容-->
+        <div class="d1">
+        <a href="javascript:vdio(0);">
+            <span class="s1">长袖西装</span>
+            <span class="s2">尊贵时尚潮流</span>
+            <span class="s3">￥218</span>
+            <img src="__HOME__/images/season01.png" />
+        </a>
+        </div>
+        <div class="d2">
+		<span class="d2s1">质尚初心 大胆炫技</span>
+		<span class="d2s2">2015秋冬特辑</span>
+		<a href="javascript:vdio(0);">超值138元</a>
+        </div>
+        <div class="d3">
+        <a href="javascript:vdio(0);">
+            <span class="s1">男装修身商务装</span>
+            <span class="s2">单色时尚</span>
+            <span class="s3">￥159</span>
+            <img src="__HOME__/images/season03.png" />
+        </a>
+        </div>
+        <div class="d4">
+        <a href="javascript:vdio(0);">
+            <span class="s1">男装尊贵商务装</span>
+            <span class="s2">韩版时尚</span>
+            <span class="s3">￥159</span>
+            <img src="__HOME__/images/season04.png" />
+        </a>
+        </div>
+        <div class="d5">
+        <a href="javascript:vdio(0);">
+            <span class="s1">深绿悠闲</span>
+            <span class="s2">欧美修身西服</span>
+            <span class="s3">￥459</span>
+            <img src="__HOME__/images/season05.png" />
+        </a>
+        </div>
+        <div class="d6">
+        <a href="javascript:vdio(0);">
+            <span class="s1">优雅风衣</span>
+            <span class="s2">男士中长款风衣</span>
+            <span class="s3">￥690</span>
+            <img src="__HOME__/images/season06.png" />
+        </a>
+        </div>
+        <div class="d7">
+        <a href="javascript:vdio(0);">
+            <span class="s1">长袖羊毛衫</span>
+            <span class="s2">修身时尚V领</span>
+            <span class="s3">￥179</span>
+            <img src="__HOME__/images/season07.png" />
+        </a>
+        </div>
+        <div class="d8">
+        <a href="javascript:vdio(0);">
+            <span class="s1">白搭牛仔裤</span>
+            <span class="s2">时尚百搭修身牛仔</span>
+            <span class="s3">￥79</span>
+            <img src="__HOME__/images/season08.png" />
+        </a>
+        </div>
+        <div class="d9">
+        <a href="javascript:vdio(0);">
+            <span class="s1">男装商务免皱裤</span>
+            <span class="s2">秋季多款精选</span>
+            <span class="s3">￥99</span>
+            <img src="__HOME__/images/season09.png" />
+        </a>
+        </div>
+    </ul>
+</div>
+
+{foreach $data as $k=>$v}
+<div class="column03"><!--1F男装部分-->
+    <div class="title"><!--标题-->
+        <div><span class="s1">1F</span>男装<span> MEN SCLOTHING</span></div>
+        <a href="javascript:vdio(0);">查看更多>></a>
+        <p class="cle"></p>
+    </div>
+    <div class="box"><!--F1中间商品区域-->
+        <div class="d1">
+        	<ul>
+            	<li><a href="javascript:vdio(0);">衬衫</a></li>
+                <li><a href="javascript:vdio(0);">T恤</a></li>
+                <li><a href="javascript:vdio(0);">裤子</a></li>
+                <li><a href="javascript:vdio(0);">外套</a></li>
+                <li><a href="javascript:vdio(0);">羽绒服</a></li>
+                <p class="cle"></p>
+            </ul>
+        </div>
+        <div class="d2">
+
+           <!--  src="{$value.aaa|default='http://hbimg.b0.upaiyun.com/b7b5b489ab8adb866af91fee3019886c5389ff9d67ab-hH0Mm2_fw658'}"
+ -->
+
+         	<img {if $v[0]['aaa'] eq ''}src="http://hbimg.b0.upaiyun.com/b7b5b489ab8adb866af91fee3019886c5389ff9d67ab-hH0Mm2_fw658"{else}src="__UP__{$v[0]['aaa']}"{/if} style="width: 181px; height: 311px" />
+            <div class="text">
+            <a href="{:url('goods/detail', ['id'=> $v[0]['id']])}">
+
+                <span class="s1">{$v[0]['goods_name']}</span>
+                <span class="s2">{$v[0]['goods_name']}</span>
+                <span class="s3">￥{$v[0]['goods_price']}</span>
+            </a>            	
+            </div>
+        </div>
+        <div class="d3" id="F1">
+            <ul id="F1bnr">
+                <li class="now">
+                    <a href="javascript:vdio(0);">
+                        <img src="__HOME__/images/F1img02.png"/>
+                        <div class="text">
+                    		<span class="s1">秋冬男装 新品上市</span>
+                            <span class="s2">品质生活 高贵人生</span>
+                    	</div>
+                    </a>                    
+                </li>
+                <li>
+                    <a href="javascript:vdio(0);">
+                        <img src="__HOME__/images/F1img03.png"/>
+                        <div class="text">
+                            <span class="s1">秋冬男装 新品上市</span>
+                            <span class="s2">品质生活 高贵人生</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:vdio(0);">
+                        <img src="__HOME__/images/F1img04.png"/>
+                        <div class="text">
+                            <span class="s1">秋冬男装 新品上市</span>
+                            <span class="s2">品质生活 高贵人生</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul id="F1icon">
+                <li class="now"></li>
+                <li></li>
+                <li></li>
+                <p class="cle"></p>
+            </ul>
+        </div>
+
+        {foreach $v as $key => $value}
+        {if $key>0}
+        <div class="d{$key+3}">
+            <a href="{:url('goods/detail', ['id'=>$value.id])}">
+                <img {if $value.aaa eq ''}src="http://hbimg.b0.upaiyun.com/b7b5b489ab8adb866af91fee3019886c5389ff9d67ab-hH0Mm2_fw658"{else}src="__UP__/{$value.aaa}"{/if}  
+                  {if $key neq 3}style="width: 217px; height: 206px"{else}style="width: 220px; height: 421px"{/if} />
+                <div class="wenz">
+                    <span class="s1">{$value.goods_name}</span>
+                    <span class="s2">{$value.goods_name}</span>
+                    <span class="s3">￥{$value.goods_price}</span>
+                </div>
+            </a>
+        </div>
+        {/if}
+        {/foreach}
+        
+    </div>
+    <div class="F1bot"><!--底部横幅区-->
+       <div class="text">
+       		<p>秋上新<span>2015 AUTUMN</span></p>	
+            <a href="javascript:vdio(0);">线上线下 同步上新</a>
+       </div> 
+    </div>        
+</div>
+{/foreach}   
+</div>
+
+<div class="concept"><!--品牌理念部分-->
+	<ul>
+		<li class="li01"><a href="javascript:vdio(0);">品质传承</a></li>
+		<li class="li02"><a href="javascript:vdio(0);">让利于你</a></li>
+		<li class="li03"><a href="javascript:vdio(0);">信誉保证</a></li>
+		<li class="li04"><a href="javascript:vdio(0);">放心购物</a></li>
+		<li class="li05"><a href="javascript:vdio(0);">安全快捷</a></li>
+		<p class="cle"></p>
+	</ul>
+</div>
+
+<div class="botnav"><!--底部导航栏-->
+	<div>
+		<ul>
+			<li class="title">新手指南</li>
+			<li><a href="javascript:vdio(0);">鸿运卡使用说明</a></li>
+			<li><a href="javascript:vdio(0);">购物卷使用说明</a></li>
+			<li><a href="javascript:vdio(0);">购物流程</a></li>
+			<li><a href="user_zc.html">客户注册</a></li>
+		</ul>
+		<ul>
+			<li class="title">支付说明</li>
+			<li><a href="javascript:vdio(0);">优惠卷使用方法</a></li>
+			<li><a href="javascript:vdio(0);">常见支付问题</a></li>
+			<li><a href="javascript:vdio(0);">支付方式</a></li>
+			<li><a href="javascript:vdio(0);">预存款支付</a></li>
+		</ul>
+		<ul>
+			<li class="title">配送问题</li>
+			<li><a href="javascript:vdio(0);">常见配送问题</a></li>
+			<li><a href="javascript:vdio(0);">配送范围</a></li>
+			<li><a href="javascript:vdio(0);">运送方式及运费方式</a></li>
+			<li><a href="javascript:vdio(0);">商品验货与签收</a></li>
+		</ul>
+		<ul>
+			<li class="title">售后服务</li>
+			<li><a href="javascript:vdio(0);">退款说明</a></li>
+			<li><a href="javascript:vdio(0);">办理退换货</a></li>
+			<li><a href="javascript:vdio(0);">退换货政策</a></li>
+			<li><a href="javascript:vdio(0);">放心消费</a></li>
+		</ul>
+		<ul>
+			<li class="title">关于我们</li>
+			<li><a href="javascript:vdio(0);">了解我们</a></li>
+			<li><a href="javascript:vdio(0);">联系我们</a></li>
+			<li><a href="javascript:vdio(0);">诚聘英才</a></li>
+		</ul>
+		<ul class="list">
+			<li class="title">服务热线:(8:000~22:00)</li>
+			<li><a href="javascript:vdio(0);">400-602-1112</a></li>		
+			<li class="title">服务邮箱</li>
+			<li><a href="javascript:vdio(0);">service@hodo.cn</a></li>
+		</ul>
+		<p class="cle"></p>
+	</div>
+</div>
+
+<div class="footer">
+	<ul><!--合作伙伴logo-->
+		<li><a href="javascript:vido(0);"><img src="__HOME__/images/partner01.gif"></a></li>
+		<li><a href="javascript:vido(0);"><img src="__HOME__/images/partner02.gif"></a></li>
+		<li><a href="javascript:vido(0);"><img src="__HOME__/images/partner03.gif"></a></li>
+		<li><a href="javascript:vido(0);"><img src="__HOME__/images/partner04.gif"></a></li>
+		<li><a href="javascript:vido(0);"><img src="__HOME__/images/partner05.gif"></a></li>
+		<li><a href="javascript:vido(0);"><img src="__HOME__/images/partner06.gif"></a></li>
+		<li><a href="javascript:vido(0);"><img src="__HOME__/images/partner07.gif"></a></li>
+		<p class="cle"></p>
+	</ul>
+	<div><!--底部文字-->
+		<a href="javascript:vido(0);">苏ICP备14039882号-4</a><span>|</span>
+		<a href="javascript:vido(0);">苏B1-20150021</a><span>|</span>
+		<a href="javascript:vido(0);">无锡Bombin网络科技有限公司</a>
+	</div>
+</div>
+
+</body>
+<script src="__HOME__/js/leftsidebar.js"></script>
+<script src="__HOME__/js/index.js"></script>
+</html>

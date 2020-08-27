@@ -1,0 +1,771 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=8" />
+	<title>Bombin男装商城商品详情</title>
+	<link rel="stylesheet" type="text/css" href="__HOME__/css/common.css">
+	<link rel="stylesheet" type="text/css" href="__HOME__/css/header.css">
+	<link rel="stylesheet" type="text/css" href="__HOME__/css/Product introduction.css">
+	<link rel="stylesheet" type="text/css" href="__HOME__/css/footer.css">
+	<script src="__HOME__/js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+
+<div class="header">
+	<div class="top"><!--顶部导航栏-->
+		<div class="topnav">
+			<ul class="left"><!--顶部左边-->
+				<li class="li01"><a href="javascript:void(0);">收藏红豆</a></li>
+				<li class="li02"><a href="javascript:void(0);">关注微博</a></li>
+				<li class="li03"><a href="javascript:void(0);">手机商城</a></li>
+				<li class="li04"><a href="javascript:void(0);">咨询电话:</a><span>400-602-1112</span></li>
+				<p class="cle"></p>
+			</ul>
+		   <ul class="right"><!--顶部右边-->
+
+				<div>{$Think.session.user_info_home.mobile|default="亲"}，欢迎来到Bombin男装商城！</div>
+
+                {if !$Think.session.user_info_home}
+				<li><a href="{:url('login/login')}">【登陆】</a></li>
+				<li><a href="{:url('login/regsiter')}">【注册】</a></li>
+                {else}
+                <li><a href="{:url('login/loginOut')}">【退出】</a></li>
+                {/if}
+
+				<li id="My"><a href="member.html">我的Bombin ∨</a></li>
+				<li class="help"><a href="javascript:vido(0);">帮助中心</a></li>
+				<p class="cle"></p>
+			</ul>
+			<p class="cle"></p>
+		</div>
+	</div>	
+	<div class="mid"><!--顶部内容区-->
+		<div class="box">
+			<div class="logo">
+                <a href="index.html">
+                    <img src="__HOME__/images/logo.png">Bombin男装商城
+                </a>
+            </div>
+			<div class="right">
+				<div class="search">
+				<form action="" method="">
+					<input class="text" type="text" size="20" />
+					<button>搜索</button>
+				</form>							
+				</div>				
+				<div class="gwc">
+					<a href="shopping.html">我的购物车</a>
+					<div id="number">0</div>
+				</div>
+				<p class="cle"></p>
+				<ul class="hot">
+					<li class="li01"><a href="javascript:void(0);">衬衫</a></li>
+					<li class="li02"><a href="javascript:void(0);">外套</a></li>
+					<li class="li03"><a href="javascript:void(0);">童装</a></li>
+					<li class="li04"><a href="javascript:void(0);">秋季热卖</a></li>
+					<li class="li05"><a href="javascript:void(0);">红豆杉</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="nav"><!--导航栏-->
+			<div id="all">
+				<a href="javascript:void(0);">全部商品分类<span>∨</span></a>
+				<ul id="leftsidebar">
+					<li class="li01">
+						男装
+						<div>
+						<a class="a01" href="javascript:void(0);">衬衫</a>
+						<a href="javascript:void(0);">羽绒服</a>
+						<a href="javascript:void(0);">毛衫</a>
+						</div>
+					</li>
+					<li class="li02">
+						居家
+						<div>
+						<a class="a01" href="javascript:void(0);">家居服</a>
+						<a href="javascript:void(0);">短裤</a>
+						<a href="javascript:void(0);">四角裤</a>
+						</div>
+					</li>
+					<li class="li03">
+						童装
+						<div>
+						<a class="a01" href="javascript:void(0);">男童</a>
+						<a href="javascript:void(0);">女童</a>
+						<a href="javascript:void(0);">婴童</a>
+						</div>
+					</li>
+					<li class="li04">
+						红豆杉
+						<div>
+						<a class="a01" href="javascript:void(0);">红豆杉</a>
+						<a href="javascript:void(0);"> </a>
+						<a href="javascript:void(0);">园林衫</a>
+						</div>
+					</li>
+					<li class="li05">
+						配饰
+						<div>
+						<a class="a01" href="javascript:void(0);">皮带</a>
+						<a href="javascript:void(0);">项链</a>
+						<a href="javascript:void(0);">鞋带</a>
+						</div>
+					</li>
+					<li class="li06">
+						套装
+						<div>
+						<a class="a01" href="javascript:void(0);">套装</a>
+						<a href="javascript:void(0);">半套装</a>
+						</div>
+					</li>
+					<li class="li07">
+						季节款式
+						<div>
+						<a class="a01" href="javascript:void(0);">夏季</a>
+						<a href="javascript:void(0);">冬季</a>
+						<a href="javascript:void(0);">秋季</a>
+						</div>
+					</li>
+					<li class="li08">
+						明星同款
+						<div>
+						<a class="a01" href="javascript:void(0);">黄晓明</a>
+						<a class="a01" href="javascript:void(0);">杨毅</a>
+						<a class="a01" href="javascript:void(0);">赵薇</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="nanzhuang.html">男装</a></li>
+				<li><a href="javascript:void(0);">专柜同步</a></li>
+				<li><a href="javascript:void(0);">居家</a></li>
+				<li><a href="javascript:void(0);">家纺</a></li>
+				<li><a href="javascript:void(0);">童装</a></li>
+				<li><a href="javascript:void(0);">女装</a></li>
+				<li><a href="javascript:void(0);">红豆杉</a></li>
+				<li><a href="javascript:void(0);">配饰</a></li>
+				<li><a href="javascript:void(0);">特色购</a></li>
+				<p class="cle"></p>
+			</ul>
+			<p class="cle"></p>
+		</div>
+	</div>	
+</div>
+
+<div class="content"><!--页面主体-->
+<div class="ppos"><!--当前位置-->
+	当前位置:
+	<a href="nanzhuang.html">男装</a> >
+	<a href="javascript:void(0);">毛衫</a> > 
+	<a href="javascript:void(0);">套头</a> >
+	<a href="javascript:void(0);">【专柜同步】 Bombin男装秋冬男士商务悠闲圆领花纹套头毛线衫 DMFSM313S</a>
+</div>
+<div class="show"><!--商品展示区域-->
+	<div class="bigimg"><!--大图片-->
+		<img src="__HOME__/images/logo.png" width="111" height="78"/>
+		<ul id="Bigimg">
+
+			{foreach $img as $k=>$v}
+			<li {if $k eq 0}class="now"{/if}><img style="width: 401px;height:401px" src="__UP__/{$v}"/ ></li>
+			{/foreach}
+		</ul>
+	</div>
+	<ul id="Smlimg"><!--小图片-->
+		{foreach $img as $k=>$v}s
+		<li class="now"><a href="javascript:void(0);"><img style="width: 50px; height: 50px" src="__UP__/{$v}"/></a></li>
+		{/foreach}
+		
+
+		<p class="cle"></p>
+	</ul>
+	<div class="middle"><!--中间文本区-->
+		<h3>【专柜同步】 红豆男装 秋冬男士商务悠闲圆领花纹套头毛线衫<br/>DMFSM313S</h3>
+		<h4>专柜无折扣款 一口价 时尚拼接提花 优雅气质</h4>
+		<div class="cost">
+			<p>商品原价： <del>￥{$data.goods_price}</del></p>
+			<p>店铺价格： <span>￥{$data.goods_price}</span></p>
+		</div>
+		<p>商品重量： <span>0.00千克（kg）</span></p>
+		<p>物流运费：  无锡市 至 <select>								
+								<option>北京市</option>
+								<option>天津市</option>
+								<option>成都市</option>
+								<option selected>无锡市</option>							
+							  </select> 卖家承担</p>
+		  {foreach $spec as $k=>$v}
+		 <div {if $k== 1}id="size"{else}id="color"{/if} class="spec_div"><!--尺码选择-->
+			 <p data-name="{$v.spec_name}" data-index="spec{$k}">选择{$v.spec_name}：
+				<div>
+					{foreach $v.child as $value}
+					<a data-name="{$v.spec_name}" class="spec" data-id="{$value.id}" href="javascript:void(0);">{$value.spec_value}</a>
+					{/foreach}
+					
+				</div>
+			 </p>
+			 <h1 class="cle"></h1>
+		 </div>	
+		 {/foreach}	 
+		 <script type="text/javascript">
+		 	$(function(){
+		 		$('.spec').click(function(){
+
+		 			arr = [];
+		 			//循环标签
+		 			// $('.spec_div').each(function(){
+
+		 			// 	if($(this).find('a').attr('style') != 'undefined'){
+
+		 			// 		alert($(this).find('a').data('id'))
+		 			// 	} 
+		 			// })
+
+		 			$('.spec').each(function(){
+							
+		 					if($(this).attr('style') == 'border-color: rgb(255, 0, 0);'){
+		 						 
+		 						 arr.push($(this).data('id'))
+		 					}
+		 			})
+		 		
+
+					str = arr.join('_')
+ 
+		 			// var data = $(this).data()
+		 			$.post("{:url('GoodsDetail/getSpecPrice')}", 
+		 				{spec_sku_id: str}, 
+		 				function(res){
+ 
+							$('.cost del').text('￥'+res.data.line_price)
+							$('.cost span').text('￥'+res.data.goods_price)
+							$('[name="spec_rel_id"]').val(res.data.id)
+		 				})
+		 		})
+
+
+		 		//点击加减
+		 		//请求后台
+		 			//后台根据选择的规格查询对应的库存
+		 		//js做出提示
+		 	})
+
+		 </script>
+		 <div id="amount"><!--数量选择-->
+		 	<p>选择数量：
+				<div>
+				<a id="jian" href="javascript:void(0);">-</a>
+				<input id="shuz" class="number" type="text" value="1"/>
+				<a id="jia" href="javascript:void(0);">+</a>
+				</div>
+			</p>
+			<h1 class="cle"></h1>
+		 </div>
+		 <div class="but"><!--购买按钮-->
+		 	<form action="" method="post">
+				<a href="indent page.html">立即购买</a>
+				<a class="cart" href="{:url('cart/add')}">加入购物车</a>
+			</form>
+
+			<!-- 创建隐藏域用于数据提交 -->
+			<form action="{:url('cart/add')}" method="post" class="cart_submit">
+				<input type="hidden" name="id" value="{$data.id}">
+				<input type="hidden" name="spec">
+				<input type="hidden" name="spec_rel_id">
+				<input type="hidden" name="num" value="1">
+			</form>
+			<script type="text/javascript">
+				$(function(){
+					$('.but .cart').click(function(){
+
+						var num = $('#shuz').val()
+						$('[name="num"]').val(num)
+
+						//判断页面中选择的规格，组装字符串，放到隐藏域
+						var spec = ''
+						$('.spec').each(function(){
+							if($(this).attr('style') == 'border-color: rgb(255, 0, 0);'){
+								spec += $(this).data('name')+ '：'+ $(this).text() + ' '
+							}
+						})
+						$('[name="spec"]').val(spec)
+
+						//获取隐藏域内容，判断有无选择规格
+						if($('[name="spec"]').val() == ''){
+							alert('请选择规格')
+						}
+
+						$('.cart_submit').submit()
+						 
+						return false
+					})
+				})
+			</script>
+		 </div>
+	</div>
+	<div class="store"><!--右边店铺-->
+		<h4>Bombin男装商城旗舰店</h4>
+        <img src="__HOME__/images/store_01.png" />
+        <div class="strname">
+        	<p>Bombin男装旗舰店</p>
+            <img src="__HOME__/images/store_02.png"/>
+            <img src="__HOME__/images/store_02.png"/>
+            <p>好评率：100.0%</p>
+        </div>
+        <h1 class="cle"></h1>
+        <h4>动态评价</h4>
+            <p>描述相符:5.0 <span class="sss1">高于</span><span class="sss2">6.0%</span></p>
+            <p>服务态度:5.0 <span class="sss1">高于</span><span class="sss2">6.0%</span></p>
+            <p>发货速度:5.0 <span class="sss1">高于</span><span class="sss2">6.0%</span></p>
+        <h4>店铺信息</h4>
+        	<p>创店时间：2015-06-28</p>
+            <p>所在地区：江苏省 无锡市 锡山区</p>
+            <p>店铺收藏: <span class="sss2">42</span>人收藏</p>
+        <a class="aa1" href="javascript:void(0);">收藏店铺</a>
+        <a class="aa2" href="javascript:void(0);">进入店铺</a>
+	</div>
+</div>
+<div class="share"><!--分享链接-->
+	<a href="javascript:void(0);"><img src="__HOME__/images/shareicon01.png"/></a>
+	<a href="javascript:void(0);"><img src="__HOME__/images/shareicon02.png"/></a>
+	<a href="javascript:void(0);"><img src="__HOME__/images/shareicon03.png"/></a>
+	<a href="javascript:void(0);"><img src="__HOME__/images/shareicon04.png"/></a>
+	<a href="javascript:void(0);"><img src="__HOME__/images/shareicon05.png"/></a>
+	<a href="javascript:void(0);"><img src="__HOME__/images/shareicon06.png"/></a>
+	<a id="coll" href="javascript:void(0);">收藏(0)</a>
+</div>
+
+<div class="contleft"><!--页面内容左边-->
+	<p class="title">商品分类</p>
+	<ul id="ul1"><!--分类导航-->
+		<li><a href="javascript:void(0);">所有商品</a></li>
+		<li>
+			<a href="javascript:void(0);">商场同款</a>			
+		</li>
+		<ul id="ul2">
+			<li><a href="javascript:void(0);">> 长袖衬衫</a></li>
+			<li><a href="javascript:void(0);">> 夹克/风衣</a></li>
+			<li><a href="javascript:void(0);">> 轻西服</a></li>
+			<li><a href="javascript:void(0);">> 长袖T恤/毛衫针织衫</a></li>
+			<li><a href="javascript:void(0);">> 短袖T恤</a></li>
+			<li><a href="javascript:void(0);">> 裤装</a></li>
+			<li><a href="javascript:void(0);">> 短袖衬衫</a></li>
+			<li><a href="javascript:void(0);">> 短袖T恤</a></li>
+			<li><a href="javascript:void(0);">> 呢大衣</a></li>
+		</ul>
+	</ul>
+	<div class="search"><!--左边搜索框-->
+		<form action="" method="post">
+			关键字：<input class="text" type="text" name="search" value=""/>
+			<input class="searchbut" type="button" name="searchbut" value="搜索"/>
+		</form>
+	</div>
+	<div class="lefthot"><!--左边热门商品区-->
+		<p class="title">热门商品</p>
+		<div class="main">
+			<div><a href="javasrcipt:void(0);"><img src="__HOME__/images/lefthot01.png" /></a></div>
+			<a href="javasrcipt:void(0);">秋上新红豆相思鸟男装韩版修身纯色长袖衬衫多色商务休闲衬衣潮XSDMF1C063-1</a>
+			<span>￥467.00</span>
+			
+			<div><a href="javasrcipt:void(0);"><img src="__HOME__/images/lefthot02.png" /></a></div>
+			<a href="javasrcipt:void(0);">秋上新红豆相思鸟男装韩版修身纯色长袖衬衫多色商务休闲衬衣潮XSDMF1C063-1</a>
+			<span>￥467.00</span>
+			
+			<div><a href="javasrcipt:void(0);"><img src="__HOME__/images/lefthot03.png" /></a></div>
+			<a href="javasrcipt:void(0);">秋上新红豆相思鸟男装韩版修身纯色长袖衬衫多色商务休闲衬衣潮XSDMF1C063-1</a>
+			<span>￥467.00</span>
+			
+			<div><a href="javasrcipt:void(0);"><img src="__HOME__/images/lefthot04.png" /></a></div>
+			<a href="javasrcipt:void(0);">秋上新红豆相思鸟男装韩版修身纯色长袖衬衫多色商务休闲衬衣潮XSDMF1C063-1</a>
+			<span>￥467.00</span>
+			
+			<div><a href="javasrcipt:void(0);"><img src="__HOME__/images/lefthot05.png" /></a></div>
+			<a href="javasrcipt:void(0);">秋上新红豆相思鸟男装韩版修身纯色长袖衬衫多色商务休闲衬衣潮XSDMF1C063-1</a>
+			<span>￥467.00</span>
+			
+			<div><a href="javasrcipt:void(0);"><img src="__HOME__/images/lefthot06.png" /></a></div>
+			<a href="javasrcipt:void(0);">秋上新红豆相思鸟男装韩版修身纯色长袖衬衫多色商务休闲衬衣潮XSDMF1C063-1</a>
+			<span>￥467.00</span>
+			
+			<div><a href="javasrcipt:void(0);"><img src="__HOME__/images/lefthot07.png" /></a></div>
+			<a href="javasrcipt:void(0);">秋上新红豆相思鸟男装韩版修身纯色长袖衬衫多色商务休闲衬衣潮XSDMF1C063-1</a>
+			<span>￥467.00</span>
+			
+			<div><a href="javasrcipt:void(0);"><img src="__HOME__/images/lefthot08.png" /></a></div>
+			<a href="javasrcipt:void(0);">秋上新红豆相思鸟男装韩版修身纯色长袖衬衫多色商务休闲衬衣潮XSDMF1C063-1</a>
+			<span>￥467.00</span>
+			
+			<div><a href="javasrcipt:void(0);"><img src="__HOME__/images/lefthot09.png" /></a></div>
+			<a href="javasrcipt:void(0);">秋上新红豆相思鸟男装韩版修身纯色长袖衬衫多色商务休闲衬衣潮XSDMF1C063-1</a>
+			<span>￥467.00</span>
+			
+			<div><a href="javasrcipt:void(0);"><img src="__HOME__/images/lefthot10.png" /></a></div>
+			<a href="javasrcipt:void(0);">秋上新红豆相思鸟男装韩版修身纯色长袖衬衫多色商务休闲衬衣潮XSDMF1C063-1</a>
+			<span>￥467.00</span>
+		</div>
+	</div>
+</div>
+
+<div class="contright"><!--页面内容右边-->
+	<ul id="rtab"><!--右边标题选项卡-->
+		<li class="now"><a href="javascript:void(0);">商品详情</a></li>
+		<li><a href="javascript:void(0);">评价详情(100)</a></li>
+		<li><a href="javascript:void(0);">成交记录(100)</a></li>
+		<li><a href="javascript:void(0);">产品咨询</a></li>
+		<p class="cle"></p>
+	</ul>
+	<div id="rmain"><!--右边商品详情-->		
+		<div class="rmainbox" style="display:block;">
+				<h6>商品参数：</h6><!--商品参数-->
+				<ul>
+					<li class="li01">工艺/流行</li>
+					<li>细分风格：精致韩风</li>
+					<p class="cle"></p>
+				</ul>
+				<ul>
+					<li class="li01">关键信息</li>
+					<li>上市年份季节：2015秋季</li>
+					<li>材质成分：聚酯纤维65%黏胶纤..</li>
+					<li>货号:70WEG617</li>
+					<li class="t">销售渠道类型：纯电商(只在线上..)</li>
+					<li>品牌：PLAYBOY/花花公子</li>
+					<li>厚薄：常规</li>
+					<li class="t">基础风格：时尚都市</li>			 
+					<p class="cle"></p>
+				</ul>
+				<ul>
+					<li class="li01">其他</li>
+					<li>使用场景：其他悠闲</li>
+					<li>适用对象：青年</li>
+					<p class="cle"></p>
+				</ul>
+				
+				<div class="hr">
+					<div class="box"><img src="__HOME__/images/logo.png" /><p>Bombin男装商城</p></div>
+				</div>
+				<img src="__HOME__/images/rmain01.gif"/>
+				<img src="__HOME__/images/rmain02.gif"/>
+                <div class="title"><!--详情标题-->
+                	<p class="left">
+                    	<span class="red">Bombin男装</span>
+                        卖点解析
+                        <span class="text">/Charactenristic</span>
+                    </p>
+                    <p class="right">优质服装.品味生活</p>
+                    <h1 class="cle"></h1>
+                </div>
+				<img src="__HOME__/images/rmain03.gif"/>
+                <div class="title"><!--详情标题-->
+                	<p class="left">
+                    	<span class="red">Bombin男装</span>
+                        实物拍摄
+                        <span class="text">/Object shooting</span>
+                    </p>
+                    <p class="right">优质服装.品味生活</p>
+                    <h1 class="cle"></h1>
+                </div>
+				<div class="hr">
+					<div class="box"><img src="__HOME__/images/logo.png" /><p>Bombin男装商城</p></div>
+				</div>
+				<img src="__HOME__/images/rmain04.gif"/>
+				<div class="hr">
+					<div class="box"><img src="__HOME__/images/logo.png" /><p>Bombin男装商城</p></div>
+				</div>
+				<img src="__HOME__/images/rmain05.gif"/>
+                <div class="title"><!--详情标题-->
+                	<p class="left">
+                    	<span class="red">Bombin男装</span>
+                        产品信息
+                        <span class="text">/Product information</span>
+                    </p>
+                    <p class="right">优质服装.品味生活</p>
+                    <h1 class="cle"></h1>
+                </div>
+				<img src="__HOME__/images/rmain06.gif"/>
+                <div class="title"><!--详情标题-->
+                	<p class="left">
+                    	<span class="red">Bombin男装</span>
+                        模特展示
+                        <span class="text">/Model display</span>
+                    </p>
+                    <p class="right">优质服装.品味生活</p>
+                    <h1 class="cle"></h1>
+                </div>
+				<img src="__HOME__/images/rmain07.gif"/>
+				<img src="__HOME__/images/rmain08.gif"/>
+				<img src="__HOME__/images/rmain09.gif"/>
+				<img src="__HOME__/images/rmain10.gif"/>
+				<img src="__HOME__/images/rmain11.gif"/>
+				<img src="__HOME__/images/rmain12.gif"/>
+				<div class="title"><!--详情标题-->
+                	<p class="left">
+                    	<span class="red">Bombin男装</span>
+                        品质细节
+                        <span class="text">/Quafilty detalls</span>
+                    </p>
+                    <p class="right">优质服装.品味生活</p>
+                    <h1 class="cle"></h1>
+                </div>
+				<img src="__HOME__/images/rmain13.gif"/>
+		</div>
+		
+		<div class="rmainbox">
+			<div class="title"><!--评价详情标题-->
+				<p class="left">
+					<span class="red">Bombin男装</span>
+					评价详情
+					<span class="text">/PINGJIAXIANGQING</span>
+				</p>
+				<p class="right">优质服装.品味生活</p>
+				<h1 class="cle"></h1>
+			</div>
+				<div class="evaluation"><!--评价详情-->
+					<ul>
+						<li>
+							<img src="__HOME__/images/headpc.png" />
+							<div class="box">
+								<img src="__HOME__/images/evaleft.png"/>
+                                <p class="p1">hly668:<span>2015-10-26 09:24:05</span></p>
+                                <p>
+                                	满意
+                                	<img src="__HOME__/images/star.png" />
+                                	<img src="__HOME__/images/star.png" />
+                                    <img src="__HOME__/images/star.png" />
+                                    <img src="__HOME__/images/star.png" />
+                                    <img src="__HOME__/images/star.png" />
+                                </p>
+                                <p>满意，好评，支持Bombin！</p>
+                                <span class="hf">
+                                	回复：谢谢亲的支持，你们的支持使我们前进的动力
+                                </span>
+							</div>
+						</li>
+						<li>
+							<img src="__HOME__/images/headpc.png" />
+							<div class="box">
+								<img src="__HOME__/images/evaleft.png"/>
+                                <p class="p1">hly668:<span>2015-10-26 09:24:05</span></p>
+                                <p>
+                                	满意
+                                	<img src="__HOME__/images/star.png" />
+                                	<img src="__HOME__/images/star.png" />
+                                    <img src="__HOME__/images/star.png" />
+                                    <img src="__HOME__/images/star.png" />
+                                    <img src="__HOME__/images/star.png" />
+                                </p>
+                                <p>满意，好评，支持Bombin！</p>
+                                <span class="hf">
+                                	回复：谢谢亲的支持，你们的支持使我们前进的动力
+                                </span>
+							</div>
+						</li>
+						<li>
+							<img src="__HOME__/images/headpc.png" />
+							<div class="box">
+								<img src="__HOME__/images/evaleft.png"/>
+                                <p class="p1">hly668:<span>2015-10-26 09:24:05</span></p>
+                                <p>
+                                	满意
+                                	<img src="__HOME__/images/star.png" />
+                                	<img src="__HOME__/images/star.png" />
+                                    <img src="__HOME__/images/star.png" />
+                                    <img src="__HOME__/images/star.png" />
+                                    <img src="__HOME__/images/star.png" />
+                                </p>
+                                <p>满意，好评，支持Bombin！</p>
+                                <span class="hf">
+                                	回复：谢谢亲的支持，你们的支持使我们前进的动力
+                                </span>
+							</div>
+						</li>
+						<li>
+							<img src="__HOME__/images/headpc.png" />
+							<div class="box">
+								<img src="__HOME__/images/evaleft.png"/>
+                                <p class="p1">hly668:<span>2015-10-26 09:24:05</span></p>
+                                <p>
+                                	满意
+                                	<img src="__HOME__/images/star.png" />
+                                	<img src="__HOME__/images/star.png" />
+                                    <img src="__HOME__/images/star.png" />
+                                    <img src="__HOME__/images/star.png" />
+                                    <img src="__HOME__/images/star.png" />
+                                </p>
+                                <p>满意，好评，支持Bombin！</p>
+                                <span class="hf">
+                                	回复：谢谢亲的支持，你们的支持使我们前进的动力
+                                </span>
+							</div>
+						</li>
+					</ul>                    
+				</div>
+                <ul class="pages"><!--页码-->
+					<li class="activ"> 1</li>
+					<li> 2</li>
+					<li> 3</li>
+					<li> 4</li>
+					<span>...</span>
+					<li>16</li>
+					<li>></li>
+					<span>共16页</span>
+					<span>转到第</span>
+					<input class="t1" type="text"/ value="2">
+					<span>页</span>
+					<input class="qdbnt" type="button"/ value="确定">
+					<p class="cle"></p>
+				</ul>
+		</div>
+		<div class="rmainbox">
+			<div class="title"><!--成交记录详情标题-->
+				<p class="left">
+					<span class="red">Bombin男装</span>
+					交易记录
+					<span class="text">/Purchase records</span>
+				</p>
+				<p class="right">优质服装.品味生活</p>
+				<h1 class="cle"></h1>
+			</div>
+			<div class="records"><!--成交记录-->
+				<ul class="cjjl">
+					<li class="litit">
+						<ul>
+							<li>买家<a href="javascript:void(0);"> [登录后可见]</a></li>
+							<li>款式/型号</li>
+							<li>数量</li>
+							<li>成交时间</li>
+							<p class="cle"></p>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><span class="ss1">嘟**0</span><span>两星级用户</span></li>
+							<li><span class="ss1">颜色:HCX06031</span><span>尺码:39</span></li>
+							<li>1</li>
+							<li><span class="ss1">2015-11-10</span><span>13:55:49</span></li>
+							<p class="cle"></p>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><span class="ss1">嘟**0</span><span>两星级用户</span></li>
+							<li><span class="ss1">颜色:HCX06031</span><span>尺码:39</span></li>
+							<li>1</li>
+							<li><span class="ss1">2015-11-10</span><span>13:55:49</span></li>
+							<p class="cle"></p>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><span class="ss1">嘟**0</span><span>两星级用户</span></li>
+							<li><span class="ss1">颜色:HCX06031</span><span>尺码:39</span></li>
+							<li>1</li>
+							<li><span class="ss1">2015-11-10</span><span>13:55:49</span></li>
+							<p class="cle"></p>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><span class="ss1">嘟**0</span><span>两星级用户</span></li>
+							<li><span class="ss1">颜色:HCX06031</span><span>尺码:39</span></li>
+							<li>1</li>
+							<li><span class="ss1">2015-11-10</span><span>13:55:49</span></li>
+							<p class="cle"></p>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><span class="ss1">嘟**0</span><span>两星级用户</span></li>
+							<li><span class="ss1">颜色:HCX06031</span><span>尺码:39</span></li>
+							<li>1</li>
+							<li><span class="ss1">2015-11-10</span><span>13:55:49</span></li>
+							<p class="cle"></p>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><span class="ss1">嘟**0</span><span>两星级用户</span></li>
+							<li><span class="ss1">颜色:HCX06031</span><span>尺码:39</span></li>
+							<li>1</li>
+							<li><span class="ss1">2015-11-10</span><span>13:55:49</span></li>
+							<p class="cle"></p>
+						</ul>
+					</li>
+				</ul>	
+			</div>
+			<ul class="pages">
+				<li class="activ"> 1</li>
+				<li> 2</li>
+				<li> 3</li>
+				<li> 4</li>
+				<span>...</span>
+				<li>16</li>
+				<li>></li>
+				<span>共16页</span>
+				<span>转到第</span>
+				<input class="t1" type="text"/ value="2">
+				<span>页</span>
+				<input class="qdbnt" type="button"/ value="确定">
+				<p class="cle"></p>
+			</ul>		
+		</div>
+		
+		<div class="rmainbox">			
+			<div class="title"><!--购买须知详情标题-->
+				<p class="left">
+					<span class="red">Bombin男装</span>
+					购买须知
+					<span class="text">/PURCHASE</span>
+				</p>
+				<p class="right">优质服装.品味生活</p>
+				<h1 class="cle"></h1>
+			</div>
+			<div class="notice"><!--购买须知-->
+				<ul>
+					<li class="li01">
+						<span>郑重承诺 QUALITY PRODUCT</span><p />
+						本店所售均为Bombin官方产品，可拨打全国客服热线400-800-0808转880750电话查询
+					</li>
+					<li class="li02">
+						<span>关于色差 ABOUT COLOR</span><p />
+						所有均为实物拍摄，因拍摄灯光，显示器等不同，一定色差。属正常现象
+					</li>
+					<li class="li03">
+						<span>关于发货 ABOUT SHIPMENTS</span><p />
+						所有现货产品，付款后3日内发货（若遇到大型活动7日内发货），预售产品按预售期发货。店铺默认快递顺丰，邮政小包，具体请咨询客服
+					</li>
+					<li class="li04">
+						<span>退换邮费 ABOUT RETURNS</span><p />
+						30天内无理由退换货，但需要保存商品完整，吊牌齐全，且不影响二次销售的情况下寄回无质量问题退换货，有买家自行承担，因质量问题退换货运费，卖家承担普通快递邮费，拒收到附件
+					</li>
+				</ul>
+			</div>
+		</div>		
+</div>
+</div>
+<p class="cle"></p>
+</div>
+
+<div class="footer">
+	<ul><!--合作伙伴logo-->
+		<li><a href="javascript:void(0);"><img src="__HOME__/images/partner01.gif"></a></li>
+		<li><a href="javascript:void(0);"><img src="__HOME__/images/partner02.gif"></a></li>
+		<li><a href="javascript:void(0);"><img src="__HOME__/images/partner03.gif"></a></li>
+		<li><a href="javascript:void(0);"><img src="__HOME__/images/partner04.gif"></a></li>
+		<li><a href="javascript:void(0);"><img src="__HOME__/images/partner05.gif"></a></li>
+		<li><a href="javascript:void(0);"><img src="__HOME__/images/partner06.gif"></a></li>
+		<li><a href="javascript:void(0);"><img src="__HOME__/images/partner07.gif"></a></li>
+		<p class="cle"></p>
+	</ul>
+	<div><!--底部文字-->
+		<a href="javascript:void(0);">苏ICP备14039882号-4</a><span>|</span>
+		<a href="javascript:void(0);">苏B1-20150021</a><span>|</span>
+		<a href="javascript:void(0);">无锡Bombin网络科技有限公司</a>
+	</div>
+</div>
+
+</body>
+<script src="__HOME__/js/leftsidebar.js"></script>
+<script src="__HOME__/js/Product introduction.js"></script>
+</html>

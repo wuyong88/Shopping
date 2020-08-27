@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=8" />
+<title>Bombin男装商城购物车</title>
+<link rel="stylesheet" type="text/css" href="__HOME__/css/common.css">
+<link rel="stylesheet" type="text/css" href="__HOME__/css/header.css">
+<link rel="stylesheet" type="text/css" href="__HOME__/css/shopping.css">
+<link rel="stylesheet" type="text/css" href="__HOME__/css/footer.css">
+<script src="__HOME__/js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+<div class="header">
+	<div class="top"><!--顶部导航栏-->
+		<div class="topnav">
+			<ul class="left"><!--顶部左边-->
+				<li class="li01"><a href="javascript:vido(0);">收藏红豆</a></li>
+				<li class="li02"><a href="javascript:vido(0);">关注微博</a></li>
+				<li class="li03"><a href="javascript:vido(0);">手机商城</a></li>
+				<li class="li04"><a href="javascript:vido(0);">咨询电话:</a><span>400-602-1112</span></li>
+				<p class="cle"></p>
+			</ul>
+			<ul class="right"><!--顶部右边-->
+
+				<div>{$Think.session.user_info_home.mobile|default="亲"}，欢迎来到Bombin男装商城！</div>
+
+                {if !$Think.session.user_info_home}
+				<li><a href="{:url('login/login')}">【登陆】</a></li>
+				<li><a href="{:url('login/regsiter')}">【注册】</a></li>
+                {else}
+                <li><a href="{:url('login/loginOut')}">【退出】</a></li>
+                {/if}
+
+				<li id="My"><a href="member.html">我的Bombin ∨</a></li>
+				<li class="help"><a href="javascript:vido(0);">帮助中心</a></li>
+				<p class="cle"></p>
+			</ul>
+			<p class="cle"></p>
+		</div>
+	</div>	
+	<div class="mid"><!--顶部内容区-->
+		<div class="box">
+			<div class="logo">
+                <a href="index.html">
+                    <img src="__HOME__/images/logo.png">Bombin男装商城
+                </a>
+            </div>
+			<div class="right">
+				<div class="search">
+				<form action="" method="">
+					<input class="text" type="text" size="20" />
+					<button>搜索</button>
+				</form>							
+				</div>				
+				<div class="gwc">
+					<a href="shopping.html">我的购物车</a>
+					<div id="number">0</div>
+				</div>
+				<p class="cle"></p>
+				<ul class="hot">
+					<li class="li01"><a href="javascript:vido(0);">衬衫</a></li>
+					<li class="li02"><a href="javascript:vido(0);">外套</a></li>
+					<li class="li03"><a href="javascript:vido(0);">童装</a></li>
+					<li class="li04"><a href="javascript:vido(0);">秋季热卖</a></li>
+					<li class="li05"><a href="javascript:vido(0);">红豆杉</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="nav"><!--导航栏-->
+			<div id="all">
+				<a href="javascript:vido(0);">全部商品分类<span>∨</span></a>
+				<ul id="leftsidebar">
+					<li class="li01">
+						男装
+						<div>
+						<a class="a01" href="javascript:vido(0);">衬衫</a>
+						<a href="javascript:vido(0);">羽绒服</a>
+						<a href="javascript:vido(0);">毛衫</a>
+						</div>
+					</li>
+					<li class="li02">
+						居家
+						<div>
+						<a class="a01" href="javascript:vido(0);">家居服</a>
+						<a href="javascript:vido(0);">短裤</a>
+						<a href="javascript:vido(0);">四角裤</a>
+						</div>
+					</li>
+					<li class="li03">
+						童装
+						<div>
+						<a class="a01" href="javascript:vido(0);">男童</a>
+						<a href="javascript:vido(0);">女童</a>
+						<a href="javascript:vido(0);">婴童</a>
+						</div>
+					</li>
+					<li class="li04">
+						红豆杉
+						<div>
+						<a class="a01" href="javascript:vido(0);">红豆杉</a>
+						<a href="javascript:vido(0);"> </a>
+						<a href="javascript:vido(0);">园林衫</a>
+						</div>
+					</li>
+					<li class="li05">
+						配饰
+						<div>
+						<a class="a01" href="javascript:vido(0);">皮带</a>
+						<a href="javascript:vido(0);">项链</a>
+						<a href="javascript:vido(0);">鞋带</a>
+						</div>
+					</li>
+					<li class="li06">
+						套装
+						<div>
+						<a class="a01" href="javascript:vido(0);">套装</a>
+						<a href="javascript:vido(0);">半套装</a>
+						</div>
+					</li>
+					<li class="li07">
+						季节款式
+						<div>
+						<a class="a01" href="javascript:vido(0);">夏季</a>
+						<a href="javascript:vido(0);">冬季</a>
+						<a href="javascript:vido(0);">秋季</a>
+						</div>
+					</li>
+					<li class="li08">
+						明星同款
+						<div>
+						<a class="a01" href="javascript:vido(0);">黄晓明</a>
+						<a class="a01" href="javascript:vido(0);">杨毅</a>
+						<a class="a01" href="javascript:vido(0);">赵薇</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="nanzhuang.html">男装</a></li>
+				<li><a href="javascript:vido(0);">专柜同步</a></li>
+				<li><a href="javascript:vido(0);">居家</a></li>
+				<li><a href="javascript:vido(0);">家纺</a></li>
+				<li><a href="javascript:vido(0);">童装</a></li>
+				<li><a href="javascript:vido(0);">女装</a></li>
+				<li><a href="javascript:vido(0);">红豆杉</a></li>
+				<li><a href="javascript:vido(0);">配饰</a></li>
+				<li><a href="javascript:vido(0);">特色购</a></li>
+				<p class="cle"></p>
+			</ul>
+			<p class="cle"></p>
+		</div>
+	</div>	
+</div>
+
+
+<div id="container">
+  <div class="title1">
+    <ul>
+      <li class="li_new">全部商品 2</li>
+      <li>降价商品 0</li>
+      <li>库存紧张 0</li>
+    </ul>
+  </div>
+  
+
+  <div class="goods">
+    
+	<div class="title">
+		<ul>
+			<li class="li02"><input name="alcheck" id="che1" class="checked" type="checkbox"/><span>全选</span>商品信息</li>
+			<li>单价</li>
+			<li>数量</li>
+			<li>金额</li>
+			<li>操作</li>
+			<p class="cle"></p>
+		</ul>
+	</div>
+	<input id="che2" class="checked" type="checkbox"/>
+    <span class="storename">店铺名称：相思鸟男装旗舰店</span>
+    <div class="cle"></div>
+    <div class="detail">
+	<!--订单详情1-->
+	{foreach $cart_data as $k=>$v}
+    <ul>
+		<li class="li01">                                  <!-- 用户在详情页面选完商品到购物车自动打钩 -->
+			<input data-id="{$v.id}" data-index="{$k}" class="checked" type="checkbox" {if $v.selected} checked="true"{/if} />  
+			<img src="__HOME__/images/goods_01.png"/>
+			<a class="name" href="javascript:void(0);">
+			{$v.goods_name}
+			<span>{$v.spec_key_name}</span>
+			</a>
+		</li>
+		<li>
+			<span class="s1">￥</span><span id="nowjg1">{$v.goods_price}</span><p class="cle"></p>
+			 
+		</li>
+		<li>
+			<form name="" action="" method="post">
+				<input id="jian1" class="bnt1 bnt" type="button" name="" value="-"/>
+				<input id="num1" class="sz" type="text" name="" value="{$v.goods_num}" size="10"/>
+				<input id="ja1" class="bnt2 bnt" type="button" name="" value="+"/>
+			</form>	
+		</li>
+		<li><span class="redwz">￥</span><span class="num" id="redwz1">{$v.goods_price * $v.goods_num}</span></li>
+		<li>
+			<a class="a1" href="javascript:void(0);">收藏</a>
+			<a class="del" data-index="{$k}" href="javascript:void(0);">删除</a>
+		</li>
+		<p class="cle"></p>
+	</ul>
+	{/foreach}
+
+	<script type="text/javascript">
+		$(function(){
+			 // 单选：选择商品前面的对勾 商品的单价乘以数量出现在总价位置
+			//多选 ： 循环所有能打钩的复选框，判断打钩的复选框【并且获取商品的单价乘以数量 每一个都累加】 出现在总价位置
+
+			// 求和的方法
+			function sum(){
+				// $('全选')
+				// $('部分选择')
+				// $('商品数量加减')
+				var sum=0
+				// ('.checked:checked') 找打√的复选框
+				$('.checked:checked').each(function(){
+					                                 // find('.num')转字符串
+					sum += Number($(this).parents('ul').find('.num').text())
+				})
+				// alert(sum)
+				$('#price').text(sum)
+			}
+
+			//$('全选')
+			$('#che3').click(function(){
+				if($(this).attr('checked')){
+					$('.checked').each(function(){
+						// 选择全选全部打钩
+						$(this).attr('checked', true)
+					})
+				
+				}else{
+					$('.checked').each(function(){
+						// 全选全部去掉打钩
+						$(this).attr('checked', false)
+					})
+				}
+              // 调用sum() 得到运行后的新数据(每次都要调用)
+				sum()
+				
+			})
+
+			//$('部分选择')
+			$('.checked').click(function(){
+                // 判断有没有打钩
+				if($(this).attr('checked')){
+					var value = 1   //打钩
+				}else{
+					var value = 0   //没打钩
+				}
+				
+
+				$.post("{:url('cart/unSelected')}", 
+					{index:$(this).data('index'), value:value}, 
+					function(res){
+						//刷新一下页面
+				})
+				// 调用sum() 得到运行后的新数据
+				sum()
+			})
+
+			//删除  传递$k
+			//请求控制器，删除cookie对应的商品
+			$('.del').click(function(){
+				var ul =$(this).parents('ul')
+				$.post("{:url('cart/unCart')}", 
+					{index:$(this).data('index')}, 
+					function(res){
+						//刷新
+						ul.remove()
+				})
+				// 调用sum() 得到运行后的新数据
+				sum()
+			})
+
+			//$('商品数量加减')
+			$('.bnt1').click(function(){
+				//请求控制器，改变cookie里面的商品的num
+			})
+
+			$('.bnt2').click(function(){
+				
+			})
+
+		})
+	</script>
+	
+	 
+	
+  </div>
+
+  <div class="billing">
+    <ul>
+      <li class="li_box"><input id="che3" name="alcheck" type="checkbox"></li>
+      <li><a href="javascript:void(0)">全选</a></li>
+      <li><a href="javascript:void(0)">删除</a></li>
+      <li><a href="javascript:void(0)">移入</a></li>
+      <li><a href="javascript:void(0)">分享</a></li>
+      <li><a href="javascript:void(0)">开始对比</a></li>
+    </ul>
+    <p>商品总价（不含运费）<span>￥</span><span id="price">00.00</span><a class="submit_order" href="{:url('Order/confirm')}">去结算</a></p>
+  </div>
+  <script type="text/javascript">
+  	$(function(){
+  		//提交购物车选中的商品准备支付
+  		$('.submit_order').click(function(){
+
+  			var arr = []
+  			$('.checked').each(function(index){
+  				if($(this).attr('checked')){
+
+					arr.push($(this).data('id'))
+  				}
+			})
+
+  			str = arr.join('_')
+  			// alert(str)
+  			$.post("{:url('Order/confirm')}", {
+  				index: str
+  			}, function(res){
+  				if(res.code != 200){
+  					alert(res.msg)
+  				}
+  				window.location.href=res.url
+  			})
+  			return false
+  		})
+  	})
+  </script>
+
+
+</div>
+
+
+<div class="footer">
+	<ul><!--合作伙伴logo-->
+		<li><a href="javascript:vido(0);"><img src="__HOME__/images/partner01.gif"></a></li>
+		<li><a href="javascript:vido(0);"><img src="__HOME__/images/partner02.gif"></a></li>
+		<li><a href="javascript:vido(0);"><img src="__HOME__/images/partner03.gif"></a></li>
+		<li><a href="javascript:vido(0);"><img src="__HOME__/images/partner04.gif"></a></li>
+		<li><a href="javascript:vido(0);"><img src="__HOME__/images/partner05.gif"></a></li>
+		<li><a href="javascript:vido(0);"><img src="__HOME__/images/partner06.gif"></a></li>
+		<li><a href="javascript:vido(0);"><img src="__HOME__/images/partner07.gif"></a></li>
+		<p class="cle"></p>
+	</ul>
+	<div><!--底部文字-->
+		<a href="javascript:vido(0);">苏ICP备14039882号-4</a><span>|</span>
+		<a href="javascript:vido(0);">苏B1-20150021</a><span>|</span>
+		<a href="javascript:vido(0);">无锡Bombin网络科技有限公司</a>
+	</div>
+</div>
+
+</body>
+<script src="__HOME__/js/leftsidebar.js"></script>
+<script src="__HOME__/js/shopping.js"></script>
+</html>
